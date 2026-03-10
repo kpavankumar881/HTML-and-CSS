@@ -1,0 +1,44 @@
+web designing <--web site <--web pages <--html elements
+
+web cilent -Server communication
+----------------------------------
+User enters URL
+      ↓
+DNS / Domain Name Mapping (www.google.com → 142.250.183.14)
+      ↓
+Server IP Address
+      ↓
+Web Service Response
+
+==> when a web client requests a website, the domain name is mapped to the server’s IP address.
+==> Web client and web service communication is the process where a client application sends HTTP requests to a web service API, and the server processes the request and returns data (usually JSON or XML) back to the client.
+
+web site and web aplication:
+-----------------------------
+web site: web site means user can only see the displayed one which came from the servier side
+web application: web application means user can interact with the web page and send data to the server and get response from the server. for example: facebook, twitter, online shopping sites etc.
+
+for the website
+----------------
+Web Browser ---Request----> web Server
+Web page    <----Response-- web Server
+
+for we Applications
+--------------------
+web Brower ---Request-->web Server ----->Application server--->Data base
+web Brower <---Response--- web server <------ Aplication server <---- Data base
+
+static web and Dynamic web
+---------------------------
+static web: static web pages are fixed and display the same content for every user. they are created using HTML and CSS, and do not require any server-side processing. for example: a personal blog or a company website that only provides information.
+Dynamic web:these websites uses server-side programming languages and databases to generate content in real-time, allowing for user interaction and personalized experiences.
+
+for example: social media platforms, e-commerce websites, and online banking portals.
+
+Web Development Stages
+----------------------
+    ==>Front end/ Client side(Html, CSS, Java Script)
+    ==>Back End/ Server side(PHP,Java,Python,node js,perl...)
+
+
+

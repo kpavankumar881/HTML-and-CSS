@@ -1,0 +1,170 @@
+web designing <--web site <--web pages <--html elements
+
+web cilent -Server communication
+----------------------------------
+User enters URL
+      ↓
+DNS / Domain Name Mapping (www.google.com → 142.250.183.14)
+      ↓
+Server IP Address
+      ↓
+Web Service Response
+
+==> when a web client requests a website, the domain name is mapped to the server’s IP address.
+==> Web client and web service communication is the process where a client application sends HTTP requests to a web service API, and the server processes the request and returns data (usually JSON or XML) back to the client.
+
+web site and web aplication:
+-----------------------------
+web site: web site means user can only see the displayed one which came from the servier side
+web application: web application means user can interact with the web page and send data to the server and get response from the server. for example: facebook, twitter, online shopping sites etc.
+
+for the website
+----------------
+Web Browser ---Request----> web Server
+Web page    <----Response-- web Server
+
+for web Applications
+--------------------
+web Brower ---Request-->web Server ----->Application server--->Data base
+web Brower <---Response--- web server <------ Aplication server <---- Data base
+
+static web and Dynamic web
+---------------------------
+static web: static web pages are fixed and display the same content for every user. they are created using HTML and CSS, and do not require any server-side processing. for example: a personal blog or a company website that only provides information.
+Dynamic web:these websites uses server-side programming languages and databases to generate content in real-time, allowing for user interaction and personalized experiences.
+
+for example: social media platforms, e-commerce websites, and online banking portals.
+
+Web Development Stages
+----------------------
+    ==>Front end/ Client side(Html, CSS, Java Script)
+    ==>Back End/ Server side(PHP,Java,Python,node js,perl...)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is html:-Hyper text Markup languages
+--------------
+HTML is the standard markup language used to create web pages. It consists of a series of elements and tags that define the structure and content of a web page. 
+HTML allows developers to create headings, paragraphs, lists, links, images, and other multimedia elements that make up a web page. 
+It is the backbone of web development and is essential for building websites and web applications.
+     # Tools
+      ------
+     ==> Text Editor
+     ==> Browser
+
+     <!DOCTYPE HTML> ----> the tag is used to say text Editor that the version is HTML5
+
+     <html> </html> ----> the tag is used for writing html code in the text Editor
+
+     <head> </head> ----> The head tag inside the html tag at head position
+
+     <title> </title> ----> the tag is used to give title to the web page
+
+     <body> </body> ----> the tag is used to write the content of the web page
+      
+      Heading tags
+      ---------------
+      <h1> </h1> ---> the tag is used for headlines
+      <h2> </h2> ---> the tag is used for sub headlines
+      <h3> </h3> ---> the tag is used for sub sub headlines
+      <h4> </h4> ---> the tag is used for sub sub sub headlines
+      <h5> </h5> ---> the tag is used for sub sub sub sub headlines
+      <h6> </h6>
+      ==>to optimize the search don't use <h1> <\h1> tag more than one time
+
+      Paragraph Tag:
+      --------------
+      <p> </p>  ---> tags used to write the paragraphs
+      <pre> </pre> ---> pre tag give output as same as write int document;
+
+      Bold Tag:
+      -----------
+      <b> </b> ---> to bold the text
+      <strong></strong> ---> to bold th text 
+
+      Italic Tag
+      ----------
+      <i> </i> ----> to convert italic tag;
+--------------------------------------------------------------------------------------------------------------------     
+
+                                                      Day-2
+-------------------------------------------------------------------------------------------------------------------
+            HTML lists
+            ----------
+            1. UnOrdered List 
+               -----------------
+                  <ul type="circle">
+                        <li> item1 </li>
+                        <li> item2 </li>
+                        <li> item3 </li>
+                  </ul>
+                  
+                  <ul> </ul> ---> for list of UnOrdered
+                  <li> </li> ---> sub tag in the <ul> tag which carry the single element in the list
+                  type="" ----> In the double code contains the circle,square,Node .
+
+            2. Ordered List
+            ----------------
+                  <ol type="1">
+                        <li> item1 </li>
+                        <li> item2 </li>
+                        <li> item3 </li>
+                  </ol>
+                  
+                  <ol> </ol> ---> for list of Ordered
+                  <li> </li> ---> sub tag in the <ol> tag which carry the single element in the list
+                  type="" ----> In the double code contains the 1, A, a, I, i .
+                  Start="10"--->where the element number is Start
+                  reversed="" --> reverse the order of the element;
+
+            3.Description list
+            --------------------
+                  <dl>
+                        <dt> term1 </dt>
+                        <dd> description of term1 </dd>
+                        <dt> term2 </dt>
+                        <dd> description of term2 </dd>
+                  </dl>
+
+                  <dl> </dl> ---> for list of Description
+                  <dt> </dt> ---> sub tag in the <dl> tag which headline to <dd> in the list
+                  <dd> </dd> ---> sub tag in the <dl> tag which carry the description of the element in the list 
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+                                                Day - 3
+-------------------------------------------------------------------------------------------------------------------------
+            HTML tables
+            ------------
+            <table border="5" style=""> 
+                  <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                  </tr>
+                  <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>10th Grade</td>
+                  </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Pavan</td>
+                        <td>11th Grade</td>
+                  </tr>
+            </table>
+            <table> </table> ---> the tag is used to create table in html
+            <tr> </tr> ---> the tag is used to create row in table
+            <td> </td> ---> the tag is used to create column in table
+            <th> </th> ---> the tag is used to create heading in table
+            <caption> </caption> ---> the tag is used to give title to the table
+            <border> ---> determines the thickness of the table border   <TABLE BORDER="2">
+            <CELLPADING> ---> Determines the distance between the border of a cell and the content of the cell <table cellpadding="2">
+            <cellspacing> ---> Determines the distance between the borders of adjacent cells <table cellspacing="2">
+            <th align="center"> ---->Possible values:Center, Left, Right
+            <td bgcolor="red"> ----->background color of the cell
+            <tr width="40%"> ------>width of the table and cell
+            <tr height="40%"> ------>height of the table and cell
+
+

@@ -1,0 +1,83 @@
+----------------------
+    Git and Github
+----------------------
+--->VCS & Git repo
+--->Staging Area and commit
+--->Branches
+--->Issues and PRs
+
+Git--->version control System
+    --->version changes
+    --->Project save
+
+------------------------
+    Git    
+------------------------
+--->version control system
+--->track changes in source code
+--->collaborate with other developers
+--->distributed version control system
+--->Git repo--->remote repository
+--->git repo is a porject folder/package
+
+------------------------
+Elememts of Git:
+--------------------
+1)Remote Repository
+    - Remote Repository services is Github
+2)Local Repository
+    - The computer building project that area called Local Repository
+3)Staging Area
+    - Before save into the local Repository to push the remote repository
+4)Working Directory  
+    - Current working files
+----------------------------------------------------------------------------------------------
+
+1)Remote Repository
+-----------------------
+    GitHub :    
+    ---->One example of remote repository hosting serivce
+    ---->GitHub is a web-based platform that provides hosting for Git repositories, allowing         -developers to collaborate on projects, manage code, and track changes. It offers features such as ---pull requests, issues tracking, and project management tools, making it a popular choice for open--source and private projects alike.    
+
+2)Local Reposiory
+-----------------------
+    Local Repository:
+---> Local Repository is a copy of the remote repository that exists on your computer. It allows you to work on the project offline and make changes to the code. You can commit your changes to the local repository, and later push those changes to the remote repository on GitHub when you're ready to share them with others. The local repository is where you do your development work before syncing it with the remote repository.
+
+4)Working Directory
+-----------------------
+    Working Directory:
+--->The working directory is the actual folder on your computer where you have the project files. It is where you make changes to the code, add new files, and delete existing ones. The working directory reflects the current state of your project, and any changes you make here can be staged and committed to the local repository before being pushed to the remote repository on GitHub.
+
+3)Staging Area
+-----------------------
+    Staging Area:
+--->The staging area, also known as the index, is an intermediate area where you can prepare your changes before committing them to the local repository. When you make changes to your files in the working directory, you can use the `git add` command to move those changes to the staging area. This allows you to review and organize your changes before finalizing them with a commit. Once you're satisfied with the staged changes, you can use the `git commit` command to save them to the local repository.
+
+git init--->To Initialize the new repository
+git status---> To check the status of pushing changes into remote repository
+git add .--->To add all the changes into staging area 
+git add filename ----> for saving particular files into the staging area
+git commit -m "message" ---> To commit the changes into local repository
+git branch ---> for the current branch
+git push origin main ---> To push the changes into remote repository
+
+
+----------------------------------------------------------------------------------------------------Working Directory---git add .---> Staging Area ---commit---> Local Repository ----push---> Remote repo
+-----------------------------------------------------------------------------------------------------
+
+-----------------BRANCHS----------------------
+Branch:
+--->A branch in Git is a separate line of development that allows you to work on different features or bug fixes without affecting the main codebase. It enables multiple developers to collaborate on the same project simultaneously by creating their own branches for specific tasks. Branches can be merged back into the main branch (often called "main" or "master") once the work is complete and tested, allowing for a more organized and efficient workflow.
+
+    ==>git checkout -b "copy1" --> 
+    ==>git checkout "copy1"
+    ==>git branch "copy2"
+
+-----------------Issues and PRs----------------------
+Issues:
+--->Issues in GitHub are a way to track tasks, enhancements, and bugs for your projects. They provide a platform for developers and users to report problems, suggest features, and discuss improvements. Each issue can be assigned to specific team members, labeled for organization, and tracked through its lifecycle until it is resolved.
+Pull Requests (PRs):
+--->Pull Requests (PRs) in GitHub are a way to propose changes to a codebase. When a developer wants to contribute to a project, they can create a pull request to merge their changes from a feature branch into the main branch. PRs allow for code review, discussion, and collaboration before the changes are integrated into the main codebase, ensuring that the quality of the code is maintained and that any potential issues are addressed.
+
+    

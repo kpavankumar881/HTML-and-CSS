@@ -21,8 +21,8 @@ Git--->version control System
 --->git repo is a porject folder/package
 
 ------------------------
-Elememts of Git:
---------------------
+ Elememts of Git:
+------------------------
 1)Remote Repository
     - Remote Repository services is Github
 2)Local Repository
@@ -80,4 +80,6 @@ Issues:
 Pull Requests (PRs):
 --->Pull Requests (PRs) in GitHub are a way to propose changes to a codebase. When a developer wants to contribute to a project, they can create a pull request to merge their changes from a feature branch into the main branch. PRs allow for code review, discussion, and collaboration before the changes are integrated into the main codebase, ensuring that the quality of the code is maintained and that any potential issues are addressed.
 
+            git clone --->to the code github to local repository
+ 
     

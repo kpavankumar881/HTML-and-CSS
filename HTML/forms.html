@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <style>
+        input:checked+label{
+            color:white;
+            background-color:blue;
+        }
+        input:in-range{
+            background-color:green;
+        }
+        input:out-of-range{
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" max="1000" min="0"> <label>telugu</label><br><br>
+    <input type="checkbox"> <label>telugu</label>
+    <input type="checkbox"> <label>telugu</label>
+
+    <form action="Response.html" target="_blank">
+        Name:<input type="text" required>
+        Password:<input type="password" required><br><br>
+        Email:<input type="email" required>
+        mobile:<input type="tel" required>
+        <br><br>
+        Place:<input type="number">
+        <br><br>
+        <input type="submit" value="Register">
+        <input type="Button" value="click">
+        <input type="reset">
+        <br><br>
+        <input type="color">
+        <br>
+        Female :<input type="radio" name="gender">
+        Male  :<input type="radio" name="gender"><br>
+        Language known:<br>
+        English <input type="checkbox">
+
+        Telugu <input type="checkbox">
+
+        Hindi <input type="checkbox"><br>
+
+        <input type="range"><br><br>
+
+        <input type="date"><br><br>
+
+        <input type="file"><br><br>
+
+        Search: <input type="search"><br><br>
+
+        <input type="time"><br><br>
+
+        <input type="week"><br><br>
+
+        <input type="month"><br><br>
+
+        URL:<input type="url"><br><br>
+
+        <textarea name="textarea" row="3" cols="10" placeholder="address">text here</textarea>
+
+        <select multiple size="3">
+            <option>English</option>
+            <option>Telugu</option>
+            <option>Hindi</option>
+            <option>Gujarati</option>
+            <option selected>Tamil</option>
+        </select>
+        
+    </form>
+</body>
+</html>

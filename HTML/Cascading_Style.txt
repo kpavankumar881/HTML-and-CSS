@@ -1,0 +1,652 @@
+                    CSS ---> Cascading style sheets
+------------------------------------------------------------------------------------------------------------------
+    Cascading style(CSS) 
+    1. Defines how our pages looks
+    2. Ways to page style to our webpage
+        1.Inline style
+        2.Internal style sheet
+        3.External style sheet
+
+    1. Inline style
+        -- Applies style at tag level
+        -- Syntax: <tag style="property:value;">
+        -- style attribute is used for inline style
+        -- Example: <p style="color:blue;background:pink">This is a paragraph</p>
+    2. Internal style sheet
+        -- Applies style to whole webpage
+        -- Syntax: <style> selector{property:value;} </style>
+        -- style tag is used for internal style sheet
+        -- Example:
+            <head>
+                <style>
+                    p{
+                        color:blue;
+                        background:pink;
+                    }
+                </style>
+            </head>
+            <body>
+                <p>This is a paragraph</p>
+                <p>This is a paragraph</p>
+                <p>This is a paragraph</p>
+            </body>  
+    3. External style sheet
+        -- Applies style to multiple webpages
+        -- Syntax: <link rel="stylesheet" href="filename.css">
+        -- link tag is used for external style sheet
+        -- Example:
+            1. Create a file named "style.css" and write the following code in it:
+                p{
+                    color:blue;
+                    background:pink;
+                }
+            2. In your HTML file, add the following code in the head section:
+                <head>
+                    <link rel="stylesheet" href="style.css">
+                </head>
+            3. Now you can use the styles defined in "style.css" in your HTML file.
+
+-----------------------------------------------------------------------------------------------------
+                        CSS Selectors
+-----------------------------------------------------------------------------------------------------   
+       ==>Using selectors we specify to which content style to be applied.
+       ==>Required for Internal and External CSS
+
+        Types of CSS selectors
+        ----------------------
+        1.Simple selectors
+        2.Combinator selectors
+        3.Pseudo - class selectors
+        4.Pseudo - element selectors
+        5.Attribute selectors
+
+    1.Simple selectors
+    ------------------------
+        1.Tag based
+        ------------
+            tagname{
+                property1:value
+                property2:value
+                .
+                .
+                .
+                .
+                propertyn:value
+            }
+            Example:
+                p{
+                    color:blue;
+                    background:pink;
+                }
+        2.id based
+        -----------
+            #idname{
+                property1:value
+                property2:value
+                .
+                .
+                .
+                .
+                propertyn:value
+            }
+            Example:
+                #para1{
+                    color:blue;
+                    background:pink;
+                }
+            Note:for every tag have different id, that means No two ids are same; 
+
+        3.class based
+        --------------
+            .class{
+                property1:value
+                property2:value
+                .
+                .
+                .
+                .
+                propertyn:value
+            }
+            Example:
+                .para{
+                    color:blue;
+                    background:pink;
+                }
+    Combinator selectors
+    ----------------------
+    1.child Selector(>)
+    2.Descendent selector(space)
+    3.Adjacent Sibling Selector(+)
+    4.General Sibling selector(~)
+
+    1.child Selector(>) :
+    ----------------------
+        -- Selects elements that are direct children of a specified element
+        -- Syntax: parent > child
+        -- Example:
+            div > p{
+                color:blue;
+                background:pink;
+            }
+            In this example, only the <p> elements that are direct 
+            children of the <div> will be styled with blue text and pink background.
+
+    2.Descendent selector(space):   
+    ------------------------------
+    -- Select the specific in the parent tag that may direct child or indirect child to the parent tag
+    -- Syntax: parent child
+        -- Example:
+            div p{
+                color:blue;
+                background:pink;
+            }
+            In this example, all <p> elements that are descendants of the <div> 
+            (including direct children and indirect children) will be styled with blue text and pink background. 
+
+    3.Adjacent Sibling Selector(+):
+    --------------------------------
+    -- Selects an element that is immediately following a specified element
+    -- Syntax: element1 + element2
+        -- Example:
+            h1 + p{
+                color:blue;
+                background:pink;
+            }
+            In this example, only the <p> element that immediately follows an <h1> 
+            will be styled with blue text and pink background.
+
+    4.General Sibling selector(~):
+    --------------------------------
+    -- Selects all elements that are siblings of a specified element
+    -- Syntax: element1 ~ element2
+        -- Example:
+            h1 ~ p{
+                color:blue;
+                background:pink;
+            }
+            In this example, all <p> elements that are siblings of an <h1> 
+            (i.e., all <p> elements that come after the <h1> in the same parent) 
+            will be styled with blue text and pink background.
+
+    5. Pseudo Elements Selectors
+------------------------------
+   -- used to select the specific part of the element
+    -- Syntax: selector::pseudo-element
+    Example:
+        p::first-letter{
+            color:blue;
+            background:pink;
+        }
+        In this example, the first letter of each <p> element will be styled with blue text and pink background.
+
+        pseudo - elements
+        --------------------
+        1.::first-letter
+        2.::first-line
+        3.::before
+        4.::after
+        5.::selection
+        --------------
+        Example:
+            p::first-letter{
+                text-transform:uppercase
+            }
+            In this example, the first letter of each <p> element will be transformed to uppercase.
+            p::first-line{
+                font-weight:bold;
+            }
+            In this example, the first line of each <p> element will be styled with bold font weight.
+            p::before{
+                content:"Hello ";
+            }
+            p::after{
+                content:" World";
+            }
+            In this example, the text "Hello " will be added before the content of each <p> element,
+            and the text " World" will be added after the content of each <p> element.
+-------------------------------------------------------------------------------------------------            
+            5.Attribute selectors
+--------------------------------------------------------------------------------------------------
+    --> Used to style an element with specified attribute or attribute value.
+    Syntax: selector[attribute=value]
+    Example:
+        a[target="_blank"]{
+            color:blue;
+        }
+        In this example, all <a> elements with the attribute target="_blank" will be styled with blue text.
+        <style>
+            p[title]{
+                color:black;
+            }
+        </style>   
+        <boby>
+        <p title="this is a title"> this is a title</p> 
+         <p> this is a title</p>
+        </boby> 
+        In this example, only the <p> element with the title attribute will be styled with black text,  
+        while the <p> element without the title attribute will not be styled.
+
+        some more:
+        -----------
+        1.[attribute] - Selects elements with the specified attribute, regardless of its value.
+          ex:
+          input[Required]{
+            border:1px solid red;
+          }
+            In this example, all <input> elements with the "required" attribute will have a red border.
+        2.[attribute=value] - Selects elements with the specified attribute and value.
+            ex:
+            input[type="text"]{
+                border:1px solid blue;
+            }
+                In this example, all <input> elements with the type attribute set to "text" will have a blue border.
+        3.[attribute~=value] - Selects elements with the specified attribute and a value that contains a specified word.
+            ex:
+            input[class~="important"]{
+                border:1px solid green;
+            }
+            <boby>
+        In this example, all <input> elements with a class attribute that contains the word "important" will have a green border.
+        4.[attribute|=value] - Selects elements with the specified attribute and a value that starts with a specified word.
+            ex:
+            input[lang|="en"]{
+                border:1px solid orange;
+            }
+        In this example, all <input> elements with a lang attribute that starts with "en" (e.g., "en", "en-US", "en-GB") will have an orange border.
+        5.[attribute^=value] - Selects elements with the specified attribute and a value that starts with a specified value.
+            ex:
+            input[name^="user"]{
+                border:1px solid purple;
+            }
+        In this example, all <input> elements with a name attribute that starts with "user" (e.g., "username", "useremail") will have a purple border.
+        6.[attribute$=value] - Selects elements with the specified attribute and a value that ends with a specified value.
+            ex:
+            input[name$="email"]{
+                border:1px solid brown;
+            }
+        In this example, all <input> elements with a name attribute that ends with "email" (e.g., "useremail", "contactemail") will have a brown border.
+        7.[attribute*=value]-Selects elements with the specified attribute and a value that subString with a specified value.
+            EX:
+            input[name*="name"]{
+                border:1px solid gray;
+            }
+        In this example, all <input> elements with a name attribute that contains the substring "name" (e.g., "username", "fullname") will have a gray border.
+
+---------------------------------------------------------------------------------------------------------------
+                Pseudo class Selectors
+---------------------------------------------------------------------------------------------
+    --> Used to style an element in a specific state or when it is being interacted with.
+    Syntax: selector:pseudo-class
+    Example:
+    a:hover{
+        color:blue;
+    }
+    In this example, all <a> elements will be styled with blue text when the user hovers over them.
+    some more:
+    1.:link - Selects all unvisited links.
+        ex:
+        a:link{
+            color:blue;
+        }
+        In this example, all unvisited <a> elements will be styled with blue text.
+    2.:visited - Selects all visited links.
+        ex:
+        a:visited{
+            color:purple;
+        }
+        In this example, all visited <a> elements will be styled with purple text.
+    3.:hover - Selects elements when the user hovers over them.
+        ex:
+        a:hover{
+            color:blue;
+        }
+        In this example, all <a> elements will be styled with blue text when the user hovers over them.
+    4.:active - Selects elements when they are being activated (e.g., clicked on).
+        Ex:
+        a:active{
+            color:red;
+        }
+        In this example, all <a> elements will be styled with red text when they are being activated (clicked on).
+    5.:focus - Selects elements when they have focus (e.g., when a user clicks on an input field).
+        Ex:
+        input:focus{
+            border:1px solid green;
+        }
+        In this example, all <input> elements will have a green border when they are focused (clicked on).
+    6.:targat - Target by id in the page to move particular place
+        Ex:
+        a:target{
+            color:blue;
+        }
+        In this example, when a user clicks on an <a> element that targets a specific id in the page,
+        the targeted element will be styled with blue text.
+    7.:required - The styles is applied to the input field that contain the attribute required
+        Ex:
+        input:required{
+            border:1px solid red;
+        }
+        In this example, all <input> elements with the "required" attribute will have a red border.
+    8.:optional - The style is applid to the input field that not contain the attribute required
+        Ex:
+        input:optional{
+            border:1px solid blue;
+        }
+        In this example, all <input> elements that do not have the "required" attribute will have a blue border.
+    9.:disabled - The style is applied to the input field that contain the attribute disabled
+        Ex:
+        input:disabled{
+            background:gray;
+        }
+        In this example, all <input> elements with the "disabled" attribute will have a gray background.
+    10.:enabled - The style is applied to the input field that not contain the attribute disabled
+        Ex:
+        input:enabled{
+            background:white;
+        }
+        In this example, all <input> elements that do not have the "disabled" attribute will have a white background.
+    11.:read-only - the style is applied to the input field that contain the attributes read-only.
+        Ex:
+        input:read-only{
+            background:lightgray;
+        }
+        In this example, all <input> elements with the "read-only" attribute will have a light gray background.
+    12.:read-write - the style is applied to the input field that not contain the attributes read-only.
+        Ex:
+        input:read-write{
+            background:white;
+        }
+        In this example, all <input> elements that do not have the "read-only" attribute will have a white background.
+    13.:vaild - when the minlength and maxlength condition satisfy it is vaild and style are applied;
+        Ex:
+        input:valid{
+            border:1px solid green;
+        }
+        In this example, all <input> elements that satisfy the minlength and maxlength conditions will have a green border.
+    14.:invalid - when the minlength and maxlength condition not satisfy it is invalid and style are applied;
+        Ex:
+        input:invalid{
+            border:1px solid red;
+        }
+        In this example, all <input> elements that do not satisfy the minlength and maxlength conditions will have a red border.
+    15.:dafualt - The style is applied to the input field contains the attribute checked;
+        Ex:
+        input:default{
+            background:lightblue;
+        }
+        In this example, all <input> elements with the "checked" attribute will have a light blue background.
+    16.:checked - The style is applied after click to the input field that contain the attribute checked;
+        Ex:
+        input:checked{
+            background:lightblue;
+        }
+        In this example, all <input> elements with the "checked" attribute will have a light blue background.
+    17.:in-range - The style is applied when the input is given range to input field,the range my max or min;
+        Ex:
+        input:in-range{
+            border:1px solid green;
+        }
+        In this example, all <input> elements that have a value within the specified 
+            range will have a green border.
+    18.:out-of-range - The style is applied when the entering input is in the given range to input field,the range my max or min;
+        Ex:
+        input:out-of-range{
+            border:1px solid red;
+        }
+        In this example, all <input> elements that have a value outside the specified 
+            range will have a red border.
+    19.:empty - the style applied when the tag is empty;
+        Ex:
+        p:empty{
+            background:yellow;
+        }
+        In this example, all <p> elements that do not contain any content (i.e., are empty) will have a yellow background.
+    20.:nth-child(n) - The style is applied to the nth child of a parent element.
+        Ex:
+        li:nth-child(2){
+            color:blue;
+        }
+        p:nth-child(3n+3){
+            color:blue;
+        }
+        -->3n+3 means 3th child of 3n child;
+        In this example, the second <li> element within its parent will be styled with blue text.  
+    21.:nth-last-child(n) - The style is applied to the nth child from the end of a parent element.
+        Ex:
+        li:nth-last-child(1){
+            color:blue;
+        }
+
+        In this example, the last <li> element within its parent will be styled with blue text.
+    22.:nth-of-type(n) - The style is applied to the nth child of a specific type within its parent element.
+        Ex:
+        p:nth-of-type(3){
+            color:blue;
+        }
+        In this example, the third <p> element of its type within its parent will be styled with blue text.
+    23.:nth-last-of-type(n) - The style is applied to the nth child from the end of a specific type within its parent element.
+        Ex:
+        p:nth-last-of-type(1){
+            color:blue;
+        }
+        In this example, the last <p> element of its type within its parent will be styled with blue text.
+    24.:first-child - The style is applied to the first child of a parent element.
+        Ex:
+        p:first-child{
+            color:blue;
+        }
+        In this example, the first <p> element that is a child of its parent will be styled with blue text.
+    25.:last-child - The style is applied to the last child of a parent element.
+        Ex:
+        p:last-child{
+            color:blue;
+        }
+        In this example, the last <p> element that is a child of its parent will be styled with blue text.
+    26.:first-of-type - The style is applied to the first child of a specific type within its parent element.
+        Ex:
+        p:first-of-type{
+            color:blue;
+        }
+        In this example, the first <p> element of its type within its parent will be styled with blue text.
+    27.:last-of-type - The style is applied to the last child of a specific type within its parent element.
+        Ex:
+        p:last-of-type{
+            color:blue;
+        }
+        In this example, the last <p> element of its type within its parent will be styled with blue text.
+    28.:not - The style is applied to all not specifed one;
+        Ex:
+        p:not(.important){
+            color:blue;
+        }
+        In this example, all <p> elements that do not have the class "important" will be styled with blue text.
+    29.:only-child - The style applied to child that is only one child and specifed type to the parent class;
+        Ex:
+        p:only-child{
+            color:blue;
+        }
+        In this example, any <p> element that is the only child of its parent will be styled with blue text.
+    30.:only-of-type - The style is applied to an element that is the only one of its type within its parent element.
+        Ex:
+        p:only-of-type{
+            color:blue;
+        }
+        In this example, any <p> element that is the only one of its type within its parent will be styled with blue text.
+------------------------------------------------------------------------------------------------------------------------------------
+                                   Box models
+------------------------------------------------------------------------------------------------------------------------------------
+    --> The box model is a fundamental concept in CSS that describes how elements are structured and how their dimensions are calculated. 
+    It consists of several components that determine the size and spacing of elements on a webpage. 
+    The main components of the box model are:
+
+    1.Content: This is the innermost part of the box where the actual content of the element is displayed. 
+        It can include text, images, or other media.
+
+    2.Padding: This is the space between the content and the border of the element. 
+        Padding can be used to create space around the content within the element.
+
+    3.Border: This is a line that surrounds the padding and content of the element. 
+        It can be styled with different widths, colors, and patterns.
+
+    4.Margin: This is the outermost layer of the box model, which creates space between the element and other elements on the page. 
+        Margins can be used to control the spacing between elements.
+
+    The total width and height of an element can be calculated using the following formulas:
+    
+    Total Width = Content Width + Padding Left + Padding Right + Border Left + Border Right + Margin Left + Margin Right
+    Total Height = Content Height + Padding Top + Padding Bottom + Border Top + Border Bottom + Margin Top + Margin Bottom
+     
+    The box model is essential for understanding how elements are displayed and how to control their layout on a webpage.
+
+    1.Content:
+    --> The content area is the innermost part of the box model where the actual content of the element is displayed.
+    2.Padding:
+    --> Padding is the space between the content and the border of the element.
+        Padding:
+        1.Padding-top: Specifies the padding on the top of the element.
+        2.Padding-right: Specifies the padding on the right side of the element.
+        3.Padding-bottom: Specifies the padding on the bottom of the element.
+        4.Padding-left: Specifies the padding on the left side of the element.
+        5.Padding: A shorthand property that sets the padding for all four sides of the element.
+    3.Border:
+    --> Border is a line that surrounds the padding and content of the element.
+        Border:
+        1.Border-width: Specifies the width of the border.
+        2.Border-style: Specifies the style of the border (e.g., solid, dashed, dotted).
+        3.Border-color: Specifies the color of the border.
+        4.Border: A shorthand property that sets the width, style, and color of the border in one declaration.
+    4.Margin:
+    --> Margin is the outermost layer of the box model, which creates space between the element and other elements on the page.
+        Margin:
+        1.Margin-top: Specifies the margin on the top of the element.
+        2.Margin-right: Specifies the margin on the right side of the element.
+        3.Margin-bottom: Specifies the margin on the bottom of the element.
+        4.Margin-left: Specifies the margin on the left side of the element.
+        5.Margin: A shorthand property that sets the margin for all four sides of the element.
+
+   ---> for inline element we can't apple margin and pedding .It chance to override the another box model;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+                            CSS Positioning
+-------------------------------------------------------------------------------------------------------------------------------------
+    --> CSS is the positioning technique which is used to postioning the layouts and element ;
+    Types of CSS Positioning
+    1.Static
+    2.Relative
+    3.Absolute
+    4.Fixed
+    5.Sticky
+     --> top and left is helps in positioning the elements
+    ---------
+    1.Static:
+    --> It is default position for all elements.
+    2.Relative:
+    --> The element is positioned relative to its normal position.
+    EX:
+        <style>
+            .relative{
+                position:relative;
+                top:10px;
+                left:20px;
+            }
+        </style>
+        <body>
+            <p class="relative">
+    3.Absolute:
+    --> The element is positioned relative to its nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+    Ex:
+       <style>
+            .absolute{
+                position:absolute;
+                top:10px;
+                left:20px;
+            }
+        </style>
+        <body>
+            <p class="absolute">  
+    4.Fixed:
+    --> The element is positioned relative to the browser window (viewport) and will not move when the page is scrolled.
+    Ex:
+       <style>
+            .fixed{
+                position:fixed;
+                top:10px;
+                left:20px;
+            }
+        </style>
+        <body>
+            <p class="fixed">
+    5.Sticky:
+    --> The element is positioned based on the user's scroll position. It toggles between relative and fixed, depending on the scroll position.
+    ex:
+    <style>
+            .sticky{
+                position:relative;
+                top:10px;
+            }
+        </style>
+        <body>
+            <p class="sticky">
+--------------------------------------------------------------------------------------------------------------------------------------
+                                        CSS Units            
+--------------------------------------------------------------------------------------------------------------------------------------
+            CSS Units ---> The CSS Units is used to measurements
+            Types of CSS Units:
+            1.Absolute Units(px)
+            2.Related to parent width/heigth(%)
+            3.Related to screen size(vw/vh)
+            4.Related to root element font(rem)
+            5.Related to its font size(em)
+            -------------------------------------
+    1.Absolute Units(px):
+    --> The pixel (px) is a commonly used absolute unit in CSS. It represents a fixed size on the screen, regardless of the device or screen resolution. 
+        One pixel is typically equal to one dot on the screen. 
+        For example, if you set an element's width to 100px, it will always be 100 pixels wide, regardless of the screen size or resolution.
+    2.Related to parent width/height(%);
+    --> The percentage (%) unit is a relative unit that is based on the size of the parent element. 
+        When you use a percentage value for a property, it is calculated as a percentage of the parent element's size. 
+        For example, if you set an element's width to 50%, it will be 50% of the width of its parent element.
+    3.Related to screen size(vw/vh)
+    --> The viewport width (vw) and viewport height (vh) units are relative to the size of the viewport (the visible area of the browser window). 
+        1vw is equal to 1% of the viewport's width, and 1vh is equal to 1% of the viewport's height. 
+        For example, if you set an element's width to 50vw, it will be 50% of the viewport's width.
+    4.Related to root element font(rem)
+    --> The root em (rem) unit is relative to the font size of the root element (usually the <html> element). 
+        1rem is equal to the font size of the root element. 
+        For example, if the root element has a font size of 16px, then 1rem will be equal to 16px.
+    5.Related to its font size(em)
+    --> The em unit is relative to the font size of the element itself. 
+        1em is equal to the current font size of the element. 
+        For example, if an element has a font size of 16px, then 1em will be equal to 16px. 
+        If you set an element's width to 2em, it will be twice the font size of that element (e.g., 32px if the font size is 16px).
+                
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+    
+
+

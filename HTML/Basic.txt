@@ -10,7 +10,7 @@ Server IP Address
       ↓
 Web Service Response
 
-==> when a web client requests a website, the domain name is mapped to the server’s IP address.
+==> When a web client requests a website, the domain name is mapped to the server’s IP address.
 ==> Web client and web service communication is the process where a client application sends HTTP requests to a web service API, and the server processes the request and returns data (usually JSON or XML) back to the client.
 
 web site and web aplication:
@@ -20,13 +20,13 @@ web application: web application means user can interact with the web page and s
 
 for the website
 ----------------
-Web Browser ---Request----> web Server
-Web page    <----Response-- web Server
+Web Browser ----Request----> web Server
+Web page    <----Response---- web Server
 
 for web Applications
 --------------------
 web Brower ---Request-->web Server ----->Application server--->Data base
-web Brower <---Response--- web server <------ Aplication server <---- Data base
+web Brower <---Response--- web server <------ Application server <---- Data base
 
 static web and Dynamic web
 ---------------------------
@@ -52,7 +52,7 @@ It is the backbone of web development and is essential for building websites and
      ==> Text Editor
      ==> Browser
 
-     <!DOCTYPE HTML> ----> the tag is used to say text Editor that the version is HTML5
+     <!DOCTYPE HTML> ----> the tag is used to say to text Editor that the version is HTML5
 
      <html> </html> ----> the tag is used for writing html code in the text Editor
 
@@ -87,7 +87,7 @@ It is the backbone of web development and is essential for building websites and
       <i> </i> ----> to convert italic tag;
 --------------------------------------------------------------------------------------------------------------------     
 
-                                                      Day-2
+            Day-2
 -------------------------------------------------------------------------------------------------------------------
             HTML lists
             ----------
@@ -133,7 +133,7 @@ It is the backbone of web development and is essential for building websites and
 
 --------------------------------------------------------------------------------------------------------------------------
 
-                                                Day - 3
+            Day - 3
 -------------------------------------------------------------------------------------------------------------------------
             HTML tables
             ------------
@@ -158,13 +158,320 @@ It is the backbone of web development and is essential for building websites and
             <tr> </tr> ---> the tag is used to create row in table
             <td> </td> ---> the tag is used to create column in table
             <th> </th> ---> the tag is used to create heading in table
+
+            Table Attributes
+            ------------------->
             <caption> </caption> ---> the tag is used to give title to the table
             <border> ---> determines the thickness of the table border   <TABLE BORDER="2">
-            <CELLPADING> ---> Determines the distance between the border of a cell and the content of the cell <table cellpadding="2">
+            <CELLPADING> ---> Determines the distance between the border of a cell and the content of the
+                  cell <table cellpadding="2">
             <cellspacing> ---> Determines the distance between the borders of adjacent cells <table cellspacing="2">
+
+            Table Attributes used in <Table>,<tr>,<th> level also
+            ---------------------------------------------------------
             <th align="center"> ---->Possible values:Center, Left, Right
             <td bgcolor="red"> ----->background color of the cell
             <tr width="40%"> ------>width of the table and cell
             <tr height="40%"> ------>height of the table and cell
+            <td rowspan="2"> -----> the cell of the particular is takes height of two rows
+            <td colspan="4"> -----> the cell takes 4 columns as a width
+
+-------------------------------------  
+            HTML Entities
+-------------------------------------     
+
+      syntax for Entities
+            & .... ;
+      Example:&lt;---->"<";
+      HTML entities are used to display reserved characters in HTML. 
+      For example, if you want to display the less than symbol (<) in your HTML code, you would use the entity &lt; instead of typing < directly. 
+      This is because < is a reserved character in HTML and can cause issues if not properly escaped. 
+
+      for less than symbol    --->&lt;
+      for greater than symbol --->&gt;
+      for ampersand symbol    --->&amp;
+      for double quote symbol --->&quot;
+      for single quote symbol --->&apos;
+      for copy                ---->&copy;
+      for registered          ---->&reg;
+      for non-breaking space  ---->&nbsp;
+      for this tab space      ---->&emsp;
+      for this small space    ---->&ensp;
+      for dolar symbol        ---->&emsp;
+      <pre> </pre> this tag shows the all spaces what ew given in the sentences, but not for tags
+      <xmp> </xmp> shows the text exactly what we written in the <xmp> tag;
+                  it ignore the tags like <h1> and it consider as a text, in side the <xmp> tag it;
+
+-----------------------------------------------------------------------------------------------------------------
+                  Anchor tags
+----------------------------------------------------------------------------------------  -----------------------
+      Anchor tag: Anchor tag is used to link one webpage to another webpages  
+      <a href="https://www.google.com">Google</a>
+
+      Attributes:
+      -----------
+      href="URL" ----> the attribute is used to link one webpage to another webpage
+      target="_blank" ----> the attribute is used to open the link in new tab
+      title="text" ----> the attribute is used to give title to the link
+      name="text" ----> the attribute is used to give name to the link
+      id="text" ----> the attribute is used to give id to the link
+      <a href="#section1">Go to Section 1</a> ----> the link will take you to the section1 in the same webpage
+      <a href="https://www.google.com" target="_blank">Google</a> ----> the link will open in new tab
+      <a href="https://www.google.com" title="Google">Google</a> ----> the link will show the title when we hover over the link
+
+      ==> |-->folder1-->about.html
+          |-->folder2-->anchor.html
+
+          ===>To navigate from about.html to anchor.html the anchor tag is
+              <a href="../folder2/anchor.html">Go to Anchor</a>
+
+          ===>|-->folder1-->about.Html
+              |-->anchor.html 
+            To navigate from about.html to anchor.html
+                        <a href="..anchor.html>go to anchor<a>
+
+----------------------------------------------------------------------------------------------------------
+                  img tag
+-----------------------------------------------------------------------------------------------------------
+      img tag is used to display images on the web page
+      <img src="image.jpg" alt="Image description" width="500" height="300">
+      <img> display in inline :means the images displays inline or side by side until saficiant
+      Attributes:
+      -----------
+      src="URL" ----> the attribute is used to specify the path of the image
+      alt="text" ----> the attribute is used to give description of the image
+      width="value" ----> the attribute is used to specify the width of the image
+      height="value" ----> the attribute is used to specify the height of the image                  
+
+------------------------------------------------------------------------------------------------------------
+                  Block level element and Inline element
+-----------------------------------------------------------------------------------------------------------
+      Block level element: Block level elements are HTML elements that start on a new line and take up the full width of their parent container. 
+                          Examples of block level elements include <div>, <p>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <ul>, <ol>, and <li>.
+
+      Inline element: Inline elements are HTML elements that do not start on a new line and only take up as much width as necessary. 
+                      Examples of inline elements include <span>, <a>,<i>, <img>, <strong>, and <em>.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+                  Div and span tags
+------------------------------------------------------------------------------------------------------------------------------------ 
+      Div tag: The <div> tag is a block-level element used to group and organize other HTML elements. It is often used for layout purposes, allowing developers to create sections or containers on a web page. 
+      Example: <div class="container">...</div>
+
+      Span tag: The <span> tag is an inline element used to apply styles or group small sections of text within a larger block of content.
+       It does not create a new line and is typically used for styling specific parts of text.
+      Example: <p>This is a <span class="highlight">highlighted</span> word.</p>   
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+                  HTML FORMS      
+-------------------------------------------------------------------------------------------------------------------------
+      =>The purpose of forms is to take the user for information
+      =>The information is then sent back to the server
+      Ex: Registration form, login form
+      Syntax:
+      <form>
+            form elements like input tag, textarea, dropdown select tags
+      </form>
+      Avaliable tag to take information from user:
+      1. <input> tag
+      2. <textarea> tag
+      3. <select> tag
+      
+      input Types:
+      =============
+      1. text
+      <input type="text"> --->take input in form of text 
+      2. password
+      <input type="password"> ---> take input in form of password means unshown one
+      3.Email
+      <input type="email"> ---> take input in form of email address
+      4. Number
+      <input type="number"> ---> take input in form of number ,option increment and decrement
+      5.tel
+      <input type="tel"> ---->take input of mobile number
+      6. Date
+      <input type="date"> ----> take input in form of date
+      7. Time
+      <input type="time"> ----> take input in form of time
+      8. Checkbox
+      <input type="checkbox"> ---> take input in form of checkbox
+      9. Radio
+      <input type="radio"> ---> take input in form of radio button with same name
+      10. Submit
+      <input type="submit"> ---> take input in form of submit button to submit the form
+      11. Reset
+      <input type="reset"> ---> take input in form of reset button to reset the form or reset the all information is pressed
+      12. File
+      <input type="file"> ---> take input in form of file to upload the file
+      13. Hidden
+      <input type="hidden"> ---> take input in form of hidden to hide the input from user but send to server
+      14. Button
+      <input type="button"> ---> take input in form of button to perform any action when clicked ,like next button
+      15. Color
+      <input type="color"> ---> take input in form of color to select the color
+      16. Range
+      <input type="range"> ---> take input in form of range to select the value from given range
+      17. Search
+      <input type="search"> ---> take input in form of search to search the information
+      18. Month
+      <input type="month"> ---> take input in form of month to select the month and year
+      19. Week
+      <input type="week"> ---> take input in form of week to select the week and year
+      20. Datetime-local
+      <input type="datetime-local"> ---> take input in form of date and time
+      21. Image
+      <input type="image"> ---> take input in form of image to submit the form with image button
+      22. Datetime
+      <input type="datetime"> ---> take input in form of date and time with timezone
+      
+      Attributes:
+      ------------
+      name="text"     ----> the attribute is used to give name to the input field,the information backend the name attribute is important
+      value="text"    ----> the attribute is used to give default value to the input field
+      placeholder="text" ----> the attribute is used to give placeholder text to the input field
+      required        ----> the attribute is used to make the input field required to fill before submitting the form
+      maxlength="value" ----> the attribute is used to specify the maximum length of the input value
+      minlength="value" ----> the attribute is used to specify the minimum length of the input value
+      pattern="regex" ----> the attribute is used to specify a regular expression that the input value must match
+      disabled ----> the attribute is used to disable the input field
+      max="50" --------> max limit to number
+      min="10" --------> min limit to number
+      step="5" --------> step value for number input is increment and decrement is 5;
+      multiple ----> the attribute is used to allow multiple file selection in file input
+      disable  -----> The not active until certain required reach
+      size="5" ---> width of the input .only upto size the words are visiable
+      autofocus----> the attribute is used to automatically focus on the input field when the page load 
+      checked  -----> you want select the radio type and checkbox type by default ;    
+      readonly-----> only see read but not write
+
+   2. <textarea> tags
+   -----------------------
+      <textarea name="message" rows="5" cols="30" placeholder="Enter your message here"></textarea>
+      The <textarea> tag is used to create a multi-line text input field in HTML forms.
+      Attributes:
+      name="text" ----> the attribute is used to give name to the textarea field
+      rows="value" ----> the attribute is used to specify the number of rows in the textarea
+      cols="value" ----> the attribute is used to specify the number of columns in the textarea
+      placeholder="text" ----> the attribute is used to give placeholder text to the textarea
+
+    3. <select> tags
+      -----------------------
+        <select name="options">
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+        </select>
+        The <select> tag is used to create a drop-down list in HTML forms.
+        Attributes:
+        name="text" ----> the attribute is used to give name to the select field
+        multiple ----> the attribute is used to allow multiple selection in the drop-down list 
+            size="value" ----> the attribute is used to specify the number of visible options in the drop-down list
+            value ="en" -----> shortcut value of the instead of sending total value brown sends just en
+            <option> tags are used inside the <select> tag to define the options in the drop-down list.
+
+ Attributes of form tag(<form>)   
+ ------------------------------------
+      1.action
+      <form action="location">
+            when we click on submit ,ro to that location
+      2.method
+      <form method="get">
+            when we click on submit ,the data is sent to the server in the URL
+      3.target
+      <form target="_blank">
+            when we click on submit ,the data is sent to the server in new tab
+      4.name  
+      <form name="myForm">
+            the attribute is used to give name to the form    
+---------------------------------------------------------------------------------------------------------------------
+                  Audio and video
+---------------------------------------------------------------------------------------------------------------------
+      1. Audio
+      ---------
+      Syntax:
+            <audio control loop autoplay>
+                  <soure src="path">
+            </audio>
+
+                  Or
+            <audio src="path"></audio>
+      The <audio> tag is used to embed audio content in an HTML document.
+      Attributes:
+      controls ----> the attribute is used to display audio controls (play, pause, volume)
+      loop ----> the attribute is used to make the audio play continuously
+      muted ----> to make default mute
+      autoplay ----> the attribute is used to make the audio play automatically when the page loads
+      src="path" ----> the attribute is used to specify the path of the audio file
+      2. Video
+      ---------
+      Syntax:
+            <video control loop autoplay>
+                  <soure src="path">
+            </video>
+
+                  Or
+            <video src="path"></video>
+      The <video> tag is used to embed video content in an HTML document.
+      Attributes:
+      controls ----> the attribute is used to display video controls (play, pause, volume)
+      loop ----> the attribute is used to make the video play continuously
+      muted ----> to make default mute
+      autoplay ----> the attribute is used to make the video play automatically when the page loads
+      src="path" ----> the attribute is used to specify the path of the video file
+      poster="location"--->thumb nail for the vidoes
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+            details tags
+------------------------------------------------------------------------------------------------------------------------
+      The <details> tag is used to create a collapsible section of content in an HTML document. 
+      It allows users to toggle the visibility of the content by clicking on a summary or heading.
+      Syntax:
+            <details>
+                  <summary>Summary text</summary>
+                  Content to be toggled
+            </details>
+      Attributes:
+      open ----> the attribute is used to specify that the details element should be open by default when the page loads 
+---------------------------------------------------------------------------------------------------------------------------------------
+                  <iframe>
+---------------------------------------------------------------------------------------------------------------------------------------
+      syntax:
+      <iframe src="URL" width="600" height="400"></iframe>
+      The <iframe> tag is used to embed another HTML document within the current document.
+      Attributes:
+      src="URL" ----> the attribute is used to specify the URL of the page to be embedded
+      width="value" ----> the attribute is used to specify the width of the iframe
+      height="value" ----> the attribute is used to specify the height of the iframe
+      frameBorder="0" ---->if no need of visiblity of border
+      scolling="yes/no/auto" -----> for need of scolling if anto--->acording to the width and height scolling is come
+      allowfullscreen ----> the attribute is used to allow the embedded content to be displayed in full-screen mode
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                  Datalist tags
+---------------------------------------------------------------------------------------------------------------------------------------------------
+      The <datalist> tag is used to provide a list of predefined options for an <input> element. 
+      It allows users to select from a list of options while still allowing them to enter their own value if desired.
+      Syntax:
+            <input list="options">
+            <datalist id="options">
+                  <option value="Option 1">
+                  <option value="Option 2">
+                  <option value="Option 3">
+            </datalist>
+      Attributes:
+      list="id" ----> the attribute is used to associate the input element with the datalist element by specifying the id of the datalist
+      id="text" ----> the attribute is used to give id to the datalist element
+      <option> tags are used inside the <datalist> tag to define the options in the list.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+      add favicons
+---------------------------------------------------------------------------------------------------------------------------------------
+      A favicon is a small icon that represents a website and is displayed in the browser's address bar, tabs, and bookmarks. 
+      To add a favicon to your website, you can use the following HTML code in the <head> section of your HTML document:
+      <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+      Attributes:
+      rel="icon" ----> the attribute is used to specify that the linked file is a favicon
+      href="path/to/favicon.ico" ----> the attribute is used to specify the path to the favicon file
+      type="image/x-icon" ----> the attribute is used to specify the MIME type of the favicon file         
 
 
+   

@@ -1,0 +1,8 @@
+                                    LINUX
+                                  -------------
+    Basic shell Commands
+    ------------------------
+    command line ---> bash
+    pwd          --->pathname of current working directry
+    ls           --->list of files and directories
+    cd           --->change directory

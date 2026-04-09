@@ -1,6 +1,7 @@
                     CSS ---> Cascading style sheets
 ------------------------------------------------------------------------------------------------------------------
     Cascading style(CSS) 
+    
     1. Defines how our pages looks
     2. Ways to page style to our webpage
         1.Inline style
@@ -41,7 +42,7 @@
                     background:pink;
                 }
             2. In your HTML file, add the following code in the head section:
-                <head>
+                <head>  
                     <link rel="stylesheet" href="style.css">
                 </head>
             3. Now you can use the styles defined in "style.css" in your HTML file.
@@ -245,7 +246,6 @@
             input[class~="important"]{
                 border:1px solid green;
             }
-            <boby>
         In this example, all <input> elements with a class attribute that contains the word "important" will have a green border.
         4.[attribute|=value] - Selects elements with the specified attribute and a value that starts with a specified word.
             ex:
@@ -541,7 +541,7 @@
     --> It is default position for all elements.
     2.Relative:
     --> The element is positioned relative to its normal position.
-    EX:
+    Ex:
         <style>
             .relative{
                 position:relative;
@@ -618,7 +618,547 @@
         1em is equal to the current font size of the element. 
         For example, if an element has a font size of 16px, then 1em will be equal to 16px. 
         If you set an element's width to 2em, it will be twice the font size of that element (e.g., 32px if the font size is 16px).
-                
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+                                    Box Sizing
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+    --> The box-sizing property in CSS is used to control how the total width and height of an element are calculated. 
+        It determines whether the padding and border are included in the element's total width and height or not. 
+        The box-sizing property can take the following values:
+    1.Content-box (default): The width and height of the element are calculated based only on the content area. 
+        Padding and border are added outside of this area, which can increase the total size of the element.
+        Ex:
+        .content-box{
+            box-sizing:content-box;
+            width:200px;
+            padding:20px;
+            border:5px solid black;
+        }
+    2.Border-box: The width and height of the element include the content, padding, and border. 
+        This means that when you set a width or height for an element, it will include the padding and border, making it 
+        easier to manage the overall size of the element.
+        Ex:
+        .border-box{
+            box-sizing:border-box;
+            width:200px;
+            padding:20px;
+            border:5px solid black;
+        }
+        
+    3.Inherit: The element inherits the box-sizing value from its parent element. 
+        Ex:
+        .inherit{
+            box-sizing:inherit;
+        }
+        In this example, the .inherit class will take the box-sizing value from its parent element, 
+        whether it's content-box or border-box.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+                            CSS colors
+-----------------------------------------------------------------------------------------------------------------------------------
+    --> CSS colors are used to specify the color of text, backgrounds, borders, and other elements on a webpage. 
+        CSS provides several ways to define colors, including:
+    1.Named Colors: CSS supports a set of predefined color names that can be used directly in your styles. 
+        For example, "red", "blue", "green", "yellow", etc.
+        ex:
+        p{
+            color:blue;
+        }
+    2.Hexadecimal Colors: Colors can be defined using hexadecimal notation, which consists of a "#" followed by six hexadecimal digits representing the red, green, and blue (RGB) components of the color. 
+        For example, "#FF0000" represents red, "#00FF00" represents green, and "#0000FF" represents blue.
+        ex:
+        p{
+            color:#FF0000;
+        }
+    3.RGB Colors: Colors can also be defined using the RGB color model, which specifies the intensity of red, green, and blue components using the rgb() function. 
+        For example, "rgb(255, 0, 0)" represents red, "rgb(0, 255, 0)" represents green, and "rgb(0, 0, 255)" represents blue.
+        ex:
+        p{
+            color:rgb(255, 0, 0);
+        }
+    4.RGBA Colors: Similar to RGB colors but with an additional alpha channel for opacity. The rgba() function allows you to specify the opacity of the color. 
+        For example, "rgba(255, 0, 0, 0.5)" represents a semi-transparent red color.
+        ex:
+        p{
+            color:rgba(255, 0, 0, 0.5);
+        }
+    5.HSL Colors: Colors can also be defined using the HSL color model, which stands for Hue, Saturation, and Lightness. The hsl() function is used to specify these values. 
+        For example, "hsl(0, 100%, 50%)" represents red (hue of 0 degrees), "hsl(120, 100%, 50%)" represents green (hue of 120 degrees), and "hsla(240, 80%, 58%, 0.90)" represents blue (hue of 240 degrees).
+        ex:
+        p{
+            color:hsl(0, 100%, 50%);
+        }
+    6.HSLA Colors: Similar to HSL colors but with an additional alpha channel for opacity. The hsla() function allows you to specify the opacity of the color. 
+        For example, "hsla(0, 100%, 50%, 0.5)" represents a semi-transparent red color.
+        ex:
+        p{
+            color:hsla(0, 100%, 50%, 0.5);
+        }
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+                            CSS Float & Clear
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    --> The CSS float property is used to position an element to the left or right of its container, allowing other content to flow around it. 
+        The clear property is used to control the behavior of elements that follow a floated element, ensuring that they do not wrap around it.
+
+    1.Float:
+    --> The float property can take the following values:
+        1.left: Floats the element to the left of its container.
+        2.right: Floats the element to the right of its container.
+        3.none: The default value, which means the element will not float and will be displayed in the normal flow of the document.
+        4.inherit: The element inherits the float value from its parent element.
+        ex:
+        .float-left{
+            float:left;
+        }
+
+    2.Clear:
+    --> The clear property can take the following values:
+        1.left: Prevents elements from wrapping around a floated element on the left side.
+        2.right: Prevents elements from wrapping around a floated element on the right side.
+        3.both: Prevents elements from wrapping around a floated element on both sides.
+        4.none: The default value, which allows elements to wrap around floated elements as needed.
+        5.inherit: The element inherits the clear value from its parent element.
+        ex:
+        .clear-both{
+            clear:both;
+        }
+
+
+-----------------------------------------------------------------------------------------------------------------------
+                                        z-index value
+---------------------------------------------------------------------------------------------------------------------
+    --> The z-index property in CSS is used to control the stacking order of elements on a webpage. 
+        It determines which elements are displayed in front of or behind others when they overlap. 
+        The z-index property can take integer values, where higher values indicate that the element will 
+        be displayed in front of elements with lower values.
+
+    1.z-index:
+    --> The z-index property can take the following values:
+        1.auto: The default value, which means the element will be stacked according to the order it appears in the HTML.
+        2.integer: A positive or negative integer that specifies the stacking order of the element. Higher values will be displayed in front of lower values.
+        3.inherit: The element inherits the z-index value from its parent element.
+        ex:
+        .z-index-1{
+            position:relative;
+            z-index:1;
+        }
+        .z-index-2{
+            position:relative;
+            z-index:2;
+        }
+        In this example, elements with the class .z-index-2 will be displayed in front of 
+        elements with the class .z-index-1 due to their higher z-index value.  
+
+------------------------------------------------------------------------------------------------------------------------
+                                Flexbox in CSS
+------------------------------------------------------------------------------------------------------------------------
+    Structure of parent and child:
+    - - - - - - - -- - - - - -  --
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    "flex-container" ---> is the parent
+    "flex-item" ---> is the child
+
+    --> Flexbox, or the Flexible Box Layout, is a CSS layout model that allows you to create 
+        flexible and responsive layouts. 
+        It provides an efficient way to align and distribute space among items in a container, 
+        even when their size is unknown or dynamic.
+
+    flex container properites --(Parent):
+    -------------------------------------
+    1.display: flex;
+    *****************
+    Defination:
+        The display: flex; property is used to define a flex container, which enables the use of flexbox layout for its child elements. 
+        When you set an element's display property to flex, it becomes a flex container, and its direct children become flex items. 
+        This allows you to control the layout and alignment of the child elements using various flexbox properties.
+        Ex:
+        .flex-container{
+            display:flex;
+        }
+    2.flex-direction:row | row-reverse | column |column-reverse;
+    *************************************************************
+    Defination:
+        The flex-direction property in CSS defines the direction in which the flex items are placed in the flex container. 
+        It can take the following values:
+        1.row: The flex items are arranged horizontally from left to right (default value).
+        2.row-reverse: The flex items are arranged horizontally from right to left.
+        3.column: The flex items are arranged vertically from top to bottom.
+        4.column-reverse: The flex items are arranged vertically from bottom to top.
+        Ex:
+        .flex-container{
+            display:flex;
+            flex-direction:row;
+        }    
+    3.flex-wrap: nowrap | wrap | wrap-reverse;
+    *******************************************
+        Defination:
+        The flex-wrap property in CSS controls whether the flex items should wrap onto multiple lines when they exceed the width of the flex container. 
+        It can take the following values:
+        1.nowrap: The flex items will not wrap and will be displayed in a single line (default value).
+        2.wrap: The flex items will wrap onto multiple lines if necessary, with the first item on each new line aligned to the start of the container.
+        3.wrap-reverse: The flex items will wrap onto multiple lines if necessary, with the first item on each new line aligned to the end of the container.
+        Ex:
+        .flex-container{
+            display:flex;
+            flex-wrap:wrap;
+        }
+    4.flex-flow: flex-direction flex-wrap;
+        Defination:
+        The flex-flow property in CSS is a shorthand property that combines the flex-direction and flex-wrap properties. 
+        It allows you to set both properties in a single declaration. 
+        The syntax for the flex-flow property is as follows:
+        flex-flow: <flex-direction> <flex-wrap>;
+        For example:
+        .flex-container{
+            display:flex;
+            flex-flow:row wrap;
+        }
+        In this example, the flex items will be arranged in a row and will wrap onto multiple lines if necessary.
+    5.justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+    **************************************************************************************************
+        Defination:
+        The justify-content property in CSS is used to align and distribute space among flex items along the main axis of the flex container. 
+        It can take the following values:
+        1.flex-start: Aligns the flex items to the start of the container (default value).
+        2.flex-end: Aligns the flex items to the end of the container.
+        3.center: Centers the flex items within the container.
+        4.space-between: Distributes the flex items evenly, with the first item at the start and the last item at the end of the container, and equal space between them.
+        5.space-around: Distributes the flex items evenly with equal space around them. The space on either side of each item is half of the space between items.
+        6.space-evenly: Distributes the flex items evenly with equal space between them, including at the start and end of the container.
+        Ex:
+        .flex-container{
+            display:flex;
+            justify-content:center;
+        }
+
+    6.align-items: stretch | flex-start | flex-end | center | baseline;
+    *******************************************************************
+        Defination:
+        The align-items property in CSS is used to align flex items along the cross axis of the flex container. 
+        It can take the following values:
+        1.stretch: Stretches the flex items to fill the container (default value).
+        2.flex-start: Aligns the flex items to the start of the cross axis.
+        3.flex-end: Aligns the flex items to the end of the cross axis.
+        4.center: Centers the flex items along the cross axis.
+        5.baseline: Aligns the flex items such that their baselines align.
+        Ex:
+        .flex-container{
+            display:flex;
+            align-items:center;
+        }
+
+    7.align-content: stretch | flex-start | flex-end | center | space-between | space-around;
+    ****************************************************************************************
+        Defination:
+        The align-content property in CSS is used to align the flex lines within a multi-line flex container when there is extra space along the cross axis. 
+        It can take the following values:
+        1.stretch: Stretches the flex lines to fill the container (default value).
+        2.flex-start: Aligns the flex lines to the start of the cross axis.
+        3.flex-end: Aligns the flex lines to the end of the cross axis.
+        4.center: Centers the flex lines along the cross axis.
+        5.space-between: Distributes the flex lines evenly, with the first line at the start and the last line at the end of the container, and equal space between them.
+        6.space-around: Distributes the flex lines evenly with equal space around them. The space on either side of each line is half of the space between lines.
+        Ex:
+        .flex-container{
+            display:flex;
+            align-content:center;
+        }
+
+    
+    flex items Properties   --(Child):
+    -------------------------------------
+    1.order:integer;
+    ******************
+        Defination:
+        The order property in CSS is used to control the order of flex items within a flex container. 
+        By default, flex items are displayed in the order they appear in the HTML source code, with an order value of 0. 
+        You can assign a positive or negative integer value to the order property to change the position of a flex item relative to others.
+        Flex items with lower order values will be displayed before those with higher values. 
+        For example, if you set an item with order: -1;, it will be displayed before items with the default order of 0.
+        Ex:
+        .flex-item-1{
+            order:1;
+        }
+        .flex-item-2{
+            order:2;
+        }
+        .flex-item-3{
+            order:3;
+        }
+        In this example, the items will be displayed in the order of .flex-item-1, .flex-item-2, and then .flex-item-3 based on their assigned order values.
+    2.flex-grow:number;
+        Defination:
+        The flex-grow property in CSS is used to specify how much a flex item should grow relative to the other flex items in the same container when there is extra space available. 
+        It takes a positive number as its value, which represents the growth factor of the flex item. 
+        A flex item with a higher flex-grow value will grow more than an item with a lower value when there is extra space in the container.
+        For example, if you have three flex items with flex-grow values of 1, 2, and 3, and there is extra space in the container, the first item will grow by 1 unit, the second item will grow by 2 units, and the third item will grow by 3 units.
+        Ex:
+        .flex-item-1{
+            flex-grow:1;
+        }
+        .flex-item-2{
+            flex-grow:2;
+        }
+        .flex-item-3{
+            flex-grow:3;
+        }
+    3.flex-shrink:number;
+        Defination:
+        The flex-shrink property in CSS is used to specify how much a flex item should shrink relative to the other flex items in the same container when there is not enough space available. 
+        It takes a positive number as its value, which represents the shrink factor of the flex item. 
+        A flex item with a higher flex-shrink value will shrink more than an item with a lower value when there is insufficient space in the container.
+        For example, if you have three flex items with flex-shrink values of 1, 2, and 3, and there is not enough space in the container, the first item will shrink by 1 unit, the second item will shrink by 2 units, and the third item will shrink by 3 units.
+        Ex:
+        .flex-item-1{
+            flex-shrink:1;
+        }
+        .flex-item-2{
+            flex-shrink:2;
+        }
+        .flex-item-3{
+            flex-shrink:3;
+        }
+    4.flex-basis:length | auto;
+        Defination:
+        The flex-basis property in CSS is used to specify the initial size of a flex item before any available space is distributed according to the flex-grow and flex-shrink properties. 
+        It can take a length value (e.g., 100px, 50%) or the keyword auto. 
+        When set to auto, the flex item will size itself based on its content, unless otherwise constrained by the container's size or other flex properties.
+        For example, if you set a flex item with flex-basis: 200px;, it will start with an initial size of 200 pixels before any growth or shrinkage occurs.
+        Ex:
+        .flex-item-1{
+            flex-basis:200px;
+        }
+    5.flex: flex-grow flex-shrink flex-basis;
+        Defination:
+        The flex property in CSS is a shorthand property that combines the flex-grow, flex-shrink, and flex-basis properties into a single declaration. 
+        It allows you to set all three properties at once for a flex item. 
+        The syntax for the flex property is as follows:
+        flex: <flex-grow> <flex-shrink> <flex-basis>;
+        For example:
+        .flex-item-1{
+            flex:1 0 200px;
+        }
+        In this example, the flex item will have a flex-grow value of 1, a flex-shrink value of 0 (meaning it will not shrink), and a flex-basis of 200 pixels.
+    6.align-self: auto | flex-start | flex-end | center | baseline | stretch;
+        Defination:
+        The align-self property in CSS is used to override the align-items property for individual flex items, allowing you to specify a different alignment for a specific item within a flex container. 
+        It can take the following values:
+        1.auto: The default value, which means the flex item will inherit the alignment from the align-items property of the container.
+        2.flex-start: Aligns the flex item to the start of the cross axis.
+        3.flex-end: Aligns the flex item to the end of the cross axis.
+        4.center: Centers the flex item along the cross axis.
+        5.baseline: Aligns the flex item such that its baseline aligns with the baseline of other items.
+        6.stretch: Stretches the flex item to fill the container along the cross axis (default behavior).
+        Ex:
+        .flex-item-1{
+            align-self:flex-start;
+        }
+----------------------------------------------------------------------------------------------------------------------------
+                            Box Shadow
+----------------------------------------------------------------------------------------------------------------------------  
+    --> The box-shadow property in CSS is used to add shadow effects around an element's frame. 
+        It allows you to create a shadow that can be offset, blurred, and colored to enhance the visual appearance of elements on a webpage.
+
+    1.box-shadow:
+    --> The box-shadow property can take the following values:
+        1.offset-x: Specifies the horizontal distance of the shadow from the element. A positive value moves the shadow to the right, while a negative value moves it to the left.
+        2.offset-y: Specifies the vertical distance of the shadow from the element. A positive value moves the shadow down, while a negative value moves it up.
+        3.blur-radius: (optional) Specifies the blur radius of the shadow. The higher the value, the more blurred the shadow will be. If omitted, it defaults to 0 (sharp shadow).
+        4.spread-radius: (optional) Specifies how much the shadow should spread. A positive value increases the size of the shadow, while a negative value decreases it. If omitted, it defaults to 0.
+        5.color: (optional) Specifies the color of the shadow. If omitted, it defaults to black.
+        box-shadow{
+                offset-x offset-y blur-radius spread-radius color;
+        }
+        Ex:
+        .box-shadow{
+            box-shadow:10px 10px 5px rgba(0,0,0,0.5);
+        }   
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+            CSS Gradient
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+    --> CSS gradients are a way to create smooth transitions between two or more colors in a background or other element. 
+        They can be used to add visual interest and depth to a design without the need for images.
+
+    1.Linear Gradient:
+    --> A linear gradient creates a gradient that transitions along a straight line. 
+        It can be defined using the linear-gradient() function, which takes multiple color stops as arguments. 
+        The syntax for a linear gradient is as follows:
+        background: linear-gradient(direction, color-stop1, color-stop2, ...);
+        For example:
+        .linear-gradient{
+            background: linear-gradient(to right, red, blue);
+        }
+        In this example, the background will transition from red on the left to blue on the right.
+
+    2.Radial Gradient:
+    --> A radial gradient creates a gradient that radiates outward from a central point. 
+        It can be defined using the radial-gradient() function, which also takes multiple color stops as arguments. 
+        The syntax for a radial gradient is as follows:
+        background: radial-gradient(shape size at position, color-stop1, color-stop2, ...);
+        For example:
+        .radial-gradient{
+            background: radial-gradient(circle at center, red, blue);
+        }
+        In this example, the background will transition from red at the center to blue at the edges in a circular pattern.
+
+    Repeating:-
+    --> CSS also provides repeating versions of gradients, which allow you to create patterns that repeat indefinitely. 
+        The syntax for repeating gradients is similar to regular gradients, but with the prefix "repeating-". 
+        For example:
+        .repeating-linear-gradient{
+            background: repeating-linear-gradient(to right, red 10%, blue 10px);
+        }
+        In this example, the linear gradient will repeat every 10 pixels, creating a striped pattern of red and blue.
+        .repeating-radial-gradient{
+            background: repeating-radial-gradient(circle at center, red 10%, blue 20px);
+        }    
+        In this example, the radial gradient will repeat every 20 pixels, creating concentric circles of red and blue.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+                        Gradient Text CSS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    --> Gradient text in CSS is a technique that allows you to apply a gradient effect to the text content of an element. 
+        This can be achieved using the background-clip and text-fill-color properties in combination with a gradient background.
+
+    1.Gradient Text:
+    --> To create gradient text, you can use the following CSS properties:
+        1.background: Specifies the gradient background for the text.
+        2.background-clip: Specifies that the background should be clipped to the text, allowing the gradient to show through the text.
+        3.text-fill-color: (optional) Specifies the color of the text fill. When set to transparent, it allows the background gradient to show through the text.
+        Ex:
+        .gradient-text{
+            background: linear-gradient(to right, red, blue);
+            background-clip: text;
+            -webkit-background-clip: text; /* For Safari */
+            color: transparent; /* Makes the text color transparent to show the gradient */
+        }
+        In this example, the text will display a gradient that transitions from red to blue across the text.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                    CSS transition
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    --> CSS transitions allow you to create smooth animations when properties of an element change. 
+        They enable you to specify the duration, timing function, and delay for the transition effect.
+
+    1.Transition:
+    --> The transition property in CSS can take the following values:
+        1.property: Specifies the name of the CSS property to which the transition should be applied (e.g., color, background-color, width).
+        2.duration: Specifies the duration of the transition in seconds or milliseconds (e.g., 0.5s, 200ms).
+        3.timing-function: Specifies the timing function that controls the pace of the transition (e.g., ease, linear, ease-in, ease-out).
+        4.delay: (optional) Specifies a delay before the transition starts in seconds or milliseconds (e.g., 0.5s, 200ms).
+        using total properitesof the Trasition:
+        - - - - - - - - - - - - - - - - - - - - - -
+        .transition{
+            transition: property duration timing-function delay;
+        }
+
+        Ex:
+        .transition{
+            transition: background-color 0.5s ease;
+        }
+        In this example, when the background-color property changes, it will transition smoothly over 0.5 seconds using an ease timing function.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                CSS Transformations
+------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+    --> CSS transformations allow you to apply various transformations to elements, such as rotating, scaling, skewing, and translating. 
+        These transformations can be used to create dynamic and visually appealing effects on web pages.
+
+    1.Transform:
+    --> The transform property in CSS can take the following values:
+        1.rotate(angle): Rotates the element by a specified angle (e.g., rotate(45deg)).
+            ==>rotateX: To rotate the element by x-axis;
+            ==>rotateY: To rotate the element by y-axis;
+        2.scale(sx, sy): Scales the element by specified factors along the x and y axes (e.g., scale(2, 1.5)).
+            ==>scaleX: Scaling only in x-axis
+            ==>scaleY: Scaling only in y-axis
+        3.skew(ax, ay): Skews the element by specified angles along the x and y axes (e.g., skew(30deg, 20deg)).
+            ==>skewX: Skewing only in x-axis
+            ==>skewY: Skewing only in y-axis
+        4.translate(tx, ty): Translates (moves) the element by specified distances along the x and y axes (e.g., translate(50px, 100px)).
+        Ex:
+        .transform{
+            transform: rotate(45deg) scale(1.5) translate(50px, 100px);
+        }
+        In this example, the element will be rotated by 45 degrees, scaled up by a factor of 1.5, and translated 50 pixels to the right and 100 pixels down.  
+        5.rotate3D:
+        The rotate3D function allows you to rotate an element in three-dimensional space by specifying the x, y, and z coordinates of the rotation axis and the angle of rotation (e.g., rotate3D(1, 1, 0, 45deg)).
+        Ex:
+        .transform{
+            transform: rotate3D(1, 1, 0, 45deg);
+        }
+        In this example, the element will be rotated by 45 degrees around an axis defined by the coordinates (1, 1, 0), which means it will rotate in both the x and y directions.
+        6.scale3D:
+        The scale3D function allows you to scale an element in three-dimensional space by specifying the scaling factors along the x, y, and z axes (e.g., scale3D(1.5, 1.5, 1)).
+        Ex:
+        .transform{
+            transform: scale3D(1.5, 1.5, 1);
+        }
+        note: perspective:
+        The perspective function is used to give a 3D perspective to an element, making it appear as if it is viewed from a certain distance.
+        Ex:
+        .transform{
+            transform: perspective(500px) rotateY(45deg);
+        }
+        In this example, the element will be scaled up by a factor of 1.5 along the x and y axes, while the z-axis scaling remains unchanged at 1.
+        7.translate3D:
+        The translate3D function allows you to translate (move) an element in three-dimensional space by specifying the distances along the x, y, and z axes (e.g., translate3D(50px, 100px, 200px)).
+        Ex:
+        .transform{
+            transform: translate3D(50px, 100px, 200px);
+        }
+        In this example, the element will be translated 50 pixels to the right along the x-axis, 100 pixels down along the y-axis, and 200 pixels forward along the z-axis.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                           Add icons in HTML
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+                website for icons
+                1.Google Fonts
+                2.Font Awesome
+                3.iconmonstr
+        1.Google Fonts
+        --> Google Fonts provides a wide range of free icons that can be easily integrated into your web projects. 
+            You can browse and select icons from the Google Fonts library, and then use the provided code to include them in your HTML. 
+            For example, to include a material icon from Google Fonts, you can use the following code:
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <span class="material-icons">face</span>
+            In this example, the "face" icon from the Material Icons set will be displayed on the webpage.
+        2.Font Awesome
+        --> Font Awesome is a popular icon library that offers a wide variety of icons for web development. 
+            You can include Font Awesome in your project by adding the following link to your HTML:
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            Then, you can use the appropriate classes to display the desired icons. For example:
+            <i class="fas fa-camera"></i>
+            In this example, the "camera" icon from Font Awesome will be displayed on the webpage.
+        3.iconmonstr
+        --> iconmonstr is a free icon library that provides a wide range of icons for various purposes. 
+            You can browse and download icons from the iconmonstr website, and then include them in your HTML using the appropriate code. 
+            For example, if you download an icon and save it as "icon.png", you can include it in your HTML like this:
+            <img src="icon.png" alt="Icon">
+            In this example, the "icon.png" image will be displayed on the webpage as an icon.
+                            
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+               
 
 
 

@@ -24,7 +24,7 @@ Git--->version control System
  Elememts of Git:
 ------------------------
 1)Remote Repository
-    - Remote Repository services is Github
+    - Remote Repository services is Github>
 2)Local Repository
     - The computer building project that area called Local Repository
 3)Staging Area
@@ -57,7 +57,7 @@ Git--->version control System
 git init--->To Initialize the new repository
 git status---> To check the status of pushing changes into remote repository
 git add .--->To add all the changes into staging area 
-git add filename ----> for saving particular files into the staging area
+git add filename ----> for saving particular files into the staging area-
 git commit -m "message" ---> To commit the changes into local repository
 git branch ---> for the current branch
 git push origin main ---> To push the changes into remote repository

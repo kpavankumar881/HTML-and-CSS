@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .special{
+            width:200px;
+            height:200px;
+        }
+        #one{
+            background:blueviolet;
+        }
+        #two{
+                background:cyan;
+                position:absolute;
+                top:20px;
+                left:20px; 
+                z-index:-1;               
+         }
+         two+p{
+            background-color:blue;
+         }
+    </style>
 </head>
 <body>
-    <h1>form submitted</h1>
+    <div id="one" class="special"></div>
+   <div id="two" class="special">
+    <p>hello</p>
+   </div>
+    <p>form submitted<p>
 </body>
 </html>

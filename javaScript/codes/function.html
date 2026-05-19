@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        function sum(num1,num2){
+            var result= num1+num2;
+            return result;
+        }
+        console.log(sum(7,8));
+        document.write("Function demo <br>")
+        document.write(sum(3,4));
+        document.write("<br> Sum of 50,100:"+sum(50,100))
+        var add = function diff(num1,num2){
+            var result= num1-num2;
+            return result;
+        }
+        var res = add(6,4);
+        document.write("<br>"+res);
+        var product=function(num1,num2){
+            var num=num1*num2;
+            return num;
+        }
+        document.write("Product of two number<br>"+product(3,4))
+
+        var sum =(function add(num1,num2){
+            var result = num1+num2;
+            return result;
+        })(5,7);
+        document.write("<br>"+sum);
+    </script>
+</body>
+</html>

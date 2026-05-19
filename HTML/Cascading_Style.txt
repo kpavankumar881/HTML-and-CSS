@@ -113,6 +113,7 @@
                     color:blue;
                     background:pink;
                 }
+
     Combinator selectors
     ----------------------
     1.child Selector(>)
@@ -144,7 +145,7 @@
             In this example, all <p> elements that are descendants of the <div> 
             (including direct children and indirect children) will be styled with blue text and pink background. 
 
-    3.Adjacent Sibling Selector(+):
+     3.Adjacent Sibling Selector(+):
     --------------------------------
     -- Selects an element that is immediately following a specified element
     -- Syntax: element1 + element2
@@ -171,7 +172,7 @@
 
     5. Pseudo Elements Selectors
 ------------------------------
-   -- used to select the specific part of the element
+    -- used to select the specific part of the element
     -- Syntax: selector::pseudo-element
     Example:
         p::first-letter{
@@ -221,8 +222,8 @@
             }
         </style>   
         <boby>
-        <p title="this is a title"> this is a title</p> 
-         <p> this is a title</p>
+        <p title="this is a title">this is a title</p> 
+         <p>this is a title</p>
         </boby> 
         In this example, only the <p> element with the title attribute will be styled with black text,  
         while the <p> element without the title attribute will not be styled.
@@ -234,13 +235,13 @@
           input[Required]{
             border:1px solid red;
           }
-            In this example, all <input> elements with the "required" attribute will have a red border.
+        In this example, all <input> elements with the "required" attribute will have a red border.
         2.[attribute=value] - Selects elements with the specified attribute and value.
             ex:
             input[type="text"]{
                 border:1px solid blue;
             }
-                In this example, all <input> elements with the type attribute set to "text" will have a blue border.
+        In this example, all <input> elements with the type attribute set to "text" will have a blue border.
         3.[attribute~=value] - Selects elements with the specified attribute and a value that contains a specified word.
             ex:
             input[class~="important"]{
@@ -273,7 +274,7 @@
         In this example, all <input> elements with a name attribute that contains the substring "name" (e.g., "username", "fullname") will have a gray border.
 
 ---------------------------------------------------------------------------------------------------------------
-                Pseudo class Selectors
+                            Pseudo class Selectors
 ---------------------------------------------------------------------------------------------
     --> Used to style an element in a specific state or when it is being interacted with.
     Syntax: selector:pseudo-class
@@ -526,7 +527,7 @@
    ---> for inline element we can't apple margin and pedding .It chance to override the another box model;
 
 --------------------------------------------------------------------------------------------------------------------------------------
-                            CSS Positioning
+                                         CSS Positioning
 -------------------------------------------------------------------------------------------------------------------------------------
     --> CSS is the positioning technique which is used to postioning the layouts and element ;
     Types of CSS Positioning
@@ -620,7 +621,7 @@
         If you set an element's width to 2em, it will be twice the font size of that element (e.g., 32px if the font size is 16px).
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-                                    Box Sizing
+                                            Box Sizing
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
     --> The box-sizing property in CSS is used to control how the total width and height of an element are calculated. 
         It determines whether the padding and border are included in the element's total width and height or not. 
@@ -654,7 +655,7 @@
         whether it's content-box or border-box.
 
 -----------------------------------------------------------------------------------------------------------------------------------
-                            CSS colors
+                                    CSS colors
 -----------------------------------------------------------------------------------------------------------------------------------
     --> CSS colors are used to specify the color of text, backgrounds, borders, and other elements on a webpage. 
         CSS provides several ways to define colors, including:
@@ -751,7 +752,7 @@
         elements with the class .z-index-1 due to their higher z-index value.  
 
 ------------------------------------------------------------------------------------------------------------------------
-                                Flexbox in CSS
+                                 Flexbox in CSS
 ------------------------------------------------------------------------------------------------------------------------
     Structure of parent and child:
     - - - - - - - -- - - - - -  --
@@ -770,6 +771,7 @@
 
     flex container properites --(Parent):
     -------------------------------------
+
     1.display: flex;
     *****************
     Defination:
@@ -780,6 +782,7 @@
         .flex-container{
             display:flex;
         }
+
     2.flex-direction:row | row-reverse | column |column-reverse;
     *************************************************************
     Defination:
@@ -793,7 +796,8 @@
         .flex-container{
             display:flex;
             flex-direction:row;
-        }    
+        }  
+
     3.flex-wrap: nowrap | wrap | wrap-reverse;
     *******************************************
         Defination:
@@ -807,7 +811,9 @@
             display:flex;
             flex-wrap:wrap;
         }
+
     4.flex-flow: flex-direction flex-wrap;
+    ***************************************
         Defination:
         The flex-flow property in CSS is a shorthand property that combines the flex-direction and flex-wrap properties. 
         It allows you to set both properties in a single declaration. 
@@ -819,6 +825,7 @@
             flex-flow:row wrap;
         }
         In this example, the flex items will be arranged in a row and will wrap onto multiple lines if necessary.
+
     5.justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
     **************************************************************************************************
         Defination:
@@ -869,7 +876,6 @@
             align-content:center;
         }
 
-    
     flex items Properties   --(Child):
     -------------------------------------
     1.order:integer;
@@ -891,6 +897,7 @@
             order:3;
         }
         In this example, the items will be displayed in the order of .flex-item-1, .flex-item-2, and then .flex-item-3 based on their assigned order values.
+
     2.flex-grow:number;
         Defination:
         The flex-grow property in CSS is used to specify how much a flex item should grow relative to the other flex items in the same container when there is extra space available. 
@@ -907,6 +914,7 @@
         .flex-item-3{
             flex-grow:3;
         }
+
     3.flex-shrink:number;
         Defination:
         The flex-shrink property in CSS is used to specify how much a flex item should shrink relative to the other flex items in the same container when there is not enough space available. 
@@ -923,6 +931,7 @@
         .flex-item-3{
             flex-shrink:3;
         }
+
     4.flex-basis:length | auto;
         Defination:
         The flex-basis property in CSS is used to specify the initial size of a flex item before any available space is distributed according to the flex-grow and flex-shrink properties. 
@@ -933,6 +942,7 @@
         .flex-item-1{
             flex-basis:200px;
         }
+
     5.flex: flex-grow flex-shrink flex-basis;
         Defination:
         The flex property in CSS is a shorthand property that combines the flex-grow, flex-shrink, and flex-basis properties into a single declaration. 
@@ -944,6 +954,7 @@
             flex:1 0 200px;
         }
         In this example, the flex item will have a flex-grow value of 1, a flex-shrink value of 0 (meaning it will not shrink), and a flex-basis of 200 pixels.
+
     6.align-self: auto | flex-start | flex-end | center | baseline | stretch;
         Defination:
         The align-self property in CSS is used to override the align-items property for individual flex items, allowing you to specify a different alignment for a specific item within a flex container. 
@@ -958,9 +969,10 @@
         .flex-item-1{
             align-self:flex-start;
         }
-----------------------------------------------------------------------------------------------------------------------------
-                            Box Shadow
-----------------------------------------------------------------------------------------------------------------------------  
+
+-------------------------------------------------------------------------------------------------------------------------
+                                            Box Shadow
+--------------------------------------------------------------------------------------------------------------------------  
     --> The box-shadow property in CSS is used to add shadow effects around an element's frame. 
         It allows you to create a shadow that can be offset, blurred, and colored to enhance the visual appearance of elements on a webpage.
 
@@ -978,9 +990,9 @@
         .box-shadow{
             box-shadow:10px 10px 5px rgba(0,0,0,0.5);
         }   
----------------------------------------------------------------------------------------------------------------------------------------------------------
-            CSS Gradient
----------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+                                            CSS Gradient
+--------------------------------------------------------------------------------------------------------------------------------
     --> CSS gradients are a way to create smooth transitions between two or more colors in a background or other element. 
         They can be used to add visual interest and depth to a design without the need for images.
 
@@ -1020,7 +1032,7 @@
         In this example, the radial gradient will repeat every 20 pixels, creating concentric circles of red and blue.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-                        Gradient Text CSS
+                                     Gradient Text CSS
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
     --> Gradient text in CSS is a technique that allows you to apply a gradient effect to the text content of an element. 
         This can be achieved using the background-clip and text-fill-color properties in combination with a gradient background.
@@ -1062,7 +1074,7 @@
         }
         In this example, when the background-color property changes, it will transition smoothly over 0.5 seconds using an ease timing function.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                                CSS Transformations
+                                  CSS Transformations
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
     --> CSS transformations allow you to apply various transformations to elements, such as rotating, scaling, skewing, and translating. 
         These transformations can be used to create dynamic and visually appealing effects on web pages.
@@ -1111,6 +1123,7 @@
             transform: translate3D(50px, 100px, 200px);
         }
         In this example, the element will be translated 50 pixels to the right along the x-axis, 100 pixels down along the y-axis, and 200 pixels forward along the z-axis.
+        
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                            Add icons in HTML
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
@@ -1138,7 +1151,316 @@
             For example, if you download an icon and save it as "icon.png", you can include it in your HTML like this:
             <img src="icon.png" alt="Icon">
             In this example, the "icon.png" image will be displayed on the webpage as an icon.
-                            
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                Media Queries
+----------------------------------------------------------------------------------------------------------------------------------------------------
+    --> Media queries in CSS are used to apply different styles to a webpage based on the characteristics of the device or screen size. 
+        They allow you to create responsive designs that adapt to various screen sizes and orientations.
+
+    1.Media Queries:
+    --> The syntax for media queries is as follows:
+        @media media-type and (condition) {
+            /* CSS rules go here */
+        }
+        For example, to apply specific styles for screens with a maximum width of 600 pixels, you can use the following media query:
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+        In this example, the background color of the body will change to light blue when the screen width is 600 pixels or less, making it suitable for mobile devices.
+        You can also combine multiple conditions in a media query. For example:
+        @media only screen and (max-width: 600px) and (orientation: portrait) {
+            body {
+                background-color: lightblue;
+            }
+        }
+        In this example, the background color will change to light blue only when the screen width is 600 pixels or less and the device is in portrait orientation.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                Variables in CSS
+----------------------------------------------------------------------------------------------------------------------------------------------------
+    --> CSS variables, also known as custom properties, allow you to store and reuse values throughout your CSS. 
+        They provide a way to maintain consistency and make it easier to update styles across a website.
+
+    1.Variables:
+    --> To define a CSS variable, you can use the -- prefix followed by the variable name. 
+        For example:
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+        }
+        In this example, two CSS variables are defined: --primary-color and --secondary-color.
+
+        To use the defined variables in your CSS, you can use the var() function. 
+        For example:
+        .button {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        In this example, the background color of the button will be set to the value of --primary-color, and the text color will be set to the value of --secondary-color. 
+        This allows for easy maintenance and updates, as you can change the variable values in one place, and all instances where they are used will automatically reflect those changes.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                            CSS grid    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    --> CSS Grid Layout is a powerful layout system in CSS that allows you to create complex and responsive grid-based designs. 
+        It provides a way to define rows and columns in a container and place items within those grid areas.
+
+    1.CSS Grid:
+    --> To create a CSS grid, you can use the display: grid; property on a container element. 
+        Then, you can define the number of rows and columns using the grid-template-rows and grid-template-columns properties. 
+        For example:
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* Creates three equal columns */
+            grid-template-rows: auto; /* Automatically adjusts row height */
+        }
+        In this example, the .grid-container will have three equal columns, and the row height will adjust automatically based on the content.
+
+        You can also use the grid-gap property to add spacing between grid items. 
+        For example:
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px; /* Adds a 10px gap between grid items */
+        }
+
+        Parent/Grid container Properities
+        ----------------------------------
+        1.grid-template-columns: Defines the number and size of columns in the grid.
+        explanation with example:
+        .grid-container {
+            display: grid;
+            grid-template-columns: 100px 200px 1fr; /* Creates three columns with specified widths */
+        }
+        2.grid-template-rows: Defines the number and size of rows in the grid.
+        explanation with example:
+        .grid-container {
+            display: grid;
+            grid-template-rows: 50px auto 100px; /* Creates three rows with specified heights */
+        }
+        3.grid-template:A shorthand property that combines grid-template-columns and grid-template-rows into a single declaration.
+        explanation with example:
+        .grid-container {
+            display: grid;
+            grid-template: 50px auto 100px / 100px 200px 1fr; /* Defines both rows and columns in one declaration */
+        }
+        4.grid-gap: Specifies the gap between grid items.
+        explanation with example:
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px; /* Adds a 20px gap between grid items */
+        }
+        5.grid-row-gap: Specifies the gap between rows in the grid.
+        Ex:
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 15px; /* Adds a 15px gap between rows */
+        }
+        6.grid-column-gap: Specifies the gap between columns in the grid.
+        Ex:
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 10px; /* Adds a 10px gap between columns */
+        }
+        7.justify-items: Aligns grid items along the row axis (horizontal).
+        Ex:
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center; /* Centers grid items horizontally */
+        }
+        8.align-items: Aligns grid items along the column axis (vertical).
+        Ex:
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center; /* Centers grid items vertically */
+        }
+        9.grid-template-areas:
+        Defines named grid areas that can be referenced when placing items in the grid.
+        Ex:
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+        }
+        specify grid-area:header in the child class;
+        ex:
+        .header {
+            grid-area: header;
+        }
+        In this example, three named grid areas are defined: header, sidebar, content, and footer.
+
+        Grid Item Properties
+        *******************************
+        1.grid-column-start: Specifies the starting column line for a grid item.
+        Ex:
+        .grid-item {
+            grid-column-start: 1; /* Starts at the first column line */
+        }
+        2.grid-column-end: Specifies the ending column line for a grid item.
+        Ex:
+        .grid-item {
+            grid-column-start: 1;/* Starts at the first colume line */
+            grid-column-end: 3; /* Ends at the third column line */
+        }
+        3.grid-row-start: Specifies the starting row line for a grid item.
+        Ex:
+        .grid-item {
+            grid-row-start: 1; /* Starts at the first row line */
+        }
+        4.grid-row-end: Specifies the ending row line for a grid item.
+        Ex:
+        .grid-item {
+            grid-row-start: 1; /* Starts at the first row line */
+            grid-row-end: 3; /* Ends at the third row line */
+        }
+        5.grid-column:A shorthand property that combines grid-column-start and grid-column-end into a single declaration.
+        Ex:
+        .grid-item {
+            grid-column: 1 / 3; /* Starts at the first column line and ends at the third column line */
+        }
+        6.grid-row: A shorthand property that combines grid-row-start and grid-row-end into a single declaration.
+        Ex:
+        .grid-item {
+            grid-row: 1 / 3; /* Starts at the first row line and ends at the third row line */
+        }
+        7.grid-area: A shorthand property that combines grid-row-start, grid-column-start, grid-row-end, and grid-column-end into a single declaration.
+        Ex:
+        .grid-item {
+            grid-area: 1 / 1 / 3 / 3; /* Starts at the first row and column line and ends at the third row and column line */
+        }
+        align-self: The align-self property allows you to override the align-items property for individual grid items, giving you control over their vertical alignment within the grid area.
+        Ex:
+        .grid-item {
+            align-self: center; /* Centers the grid item vertically within its grid area */
+        }
+        justify-self: The justify-self property allows you to override the justify-items property for individual grid items, giving you control over their horizontal alignment within the grid area.
+        Ex:
+        .grid-item {
+            justify-self: center; /* Centers the grid item horizontally within its grid area */
+        }  
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+                                        Animations in CSS
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    --> CSS animations allow you to create dynamic and engaging effects by animating the properties of HTML elements over time. 
+        They enable you to define keyframes that specify the styles at different points in the animation sequence.
+
+    1.Animation:
+    --> To create a CSS animation, you can use the @keyframes rule to define the animation sequence, and then apply the animation to an element using the animation property. 
+        For example:
+        @keyframes example {
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+        .animated-element {
+            animation: example 2s infinite; /* Applies the animation with a duration of 2 seconds and infinite repetition */
+        }
+        In this example, the background color of the .animated-element will transition from red to yellow over a duration of 2 seconds, and it will repeat indefinitely.
+    Properities:
+    *******************
+         @keyframes example {
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+        1.animation-name: Specifies the name of the @keyframes animation to apply to the element.
+
+        .animated-element {
+            animation-name: example; /* Applies the animation defined in @keyframes */
+        }
+        2.animation-duration: Specifies the duration of the animation in seconds or milliseconds (e.g., 2s, 500ms).
+       
+        .animated-element {
+            animation-duration: 2s; /* Sets the duration of the animation to 2 seconds */
+        }
+        3.animation-timing-function: Specifies the timing function that controls the pace of the animation (e.g., ease, linear, ease-in, ease-out,ease-out-in).
+
+        .animated-element {
+            animation-timing-function: ease; /* Sets the timing function for the animation */
+        }
+        4.animation-delay: Specifies a delay before the animation starts in seconds or milliseconds (e.g., 1s, 200ms).
+
+        .animated-element {
+            animation-delay: 1s; /* Delays the start of the animation by 1 second */
+        }
+        5.animation-iteration-count: Specifies the number of times the animation should repeat (e.g., infinite, 3).
+        .animated-element {
+            animation-iteration-count: infinite;or 3 /* Makes the animation repeat indefinitely */
+        }
+        6.animation-direction: Specifies whether the animation should play in reverse on alternate cycles (e.g., normal, reverse, alternate).
+        .animated-element {
+            animation-direction: alternate; /* Plays the animation in reverse on alternate cycles */
+        }
+        7.animation-fill-mode: Specifies how a CSS animation applies styles to its target before and after it is executing (e.g., none, forwards, backwards, both).
+        .animated-element {
+            animation-fill-mode: forwards; /* Retains the styles of the last keyframe after the animation completes */
+        }
+        8.animation-play-state: Specifies whether the animation is running or paused (e.g., running, paused).
+        .animated-element {
+            animation-play-state: paused; /* Pauses the animation */
+        }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                CSS display property | visibility property
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+    --> The CSS display property and visibility property are used to control the visibility and layout of elements on a webpage. 
+        While both properties affect how elements are displayed, they have different effects on the layout and interactivity of the elements.
+
+    1.Display Property:
+    --> The display property in CSS is used to specify how an element should be displayed on the webpage. 
+        It can take various values, such as block, inline, inline-block, none, flex, grid, etc. 
+        When an element is set to display: none;, it is completely removed from the document flow, meaning it will not take up any space on the page and will not be visible to users.
+        Ex:
+        .hidden-element {
+            display: none; /* Hides the element and removes it from the document flow */
+        }
+    2.Visibility Property:
+    --> The visibility property in CSS is used to control the visibility of an element without affecting its layout. 
+        When an element is set to visibility: hidden;, it will be hidden from view, but it will still take up space in the layout and can affect the positioning of other elements on the page.
+        Ex:
+        .invisible-element {
+            visibility: hidden; /* Hides the element but keeps its space in the layout */
+        }
+        In summary, the display property controls both the visibility and layout of an element, while the visibility property only controls the visibility without affecting the layout.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                position:Absolute vs Relative
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    --> The position property in CSS is used to specify the positioning of an element on a webpage. 
+        The two common values for the position property are absolute and relative, which have different effects on how elements are positioned and interact with other elements on the page.
+
+    1.Position: Absolute
+    --> When an element is set to position: absolute;, it is removed from the normal document flow and positioned relative to its nearest positioned ancestor (an ancestor with a position value of relative, absolute, or fixed). 
+        If there is no positioned ancestor, it will be positioned relative to the initial containing block (usually the viewport). 
+        Absolute positioning allows you to place an element at specific coordinates on the page using the top, right, bottom, and left properties.
+        Ex:
+        .absolute-element {
+            position: absolute;
+            top: 50px; /* Positions the element 50 pixels from the top of its containing block */
+            left: 100px; /* Positions the element 100 pixels from the left of its containing block */
+        }
+    2.Position: Relative
+    --> When an element is set to position: relative;, it remains in the normal document flow, but you can use the top, right, bottom, and left properties to adjust its position relative to its normal position. 
+        This means that the element will still take up space in the layout, and other elements will be positioned as if the relatively positioned element were still in its original place.
+        Ex:
+        .relative-element {
+            position: relative;
+            top: 20px; /* Moves the element 20 pixels down from its normal position */
+            left: 30px; /* Moves the element 30 pixels to the right from its normal position */
+        }
+
+
+
+
+       
+    
 
 
 

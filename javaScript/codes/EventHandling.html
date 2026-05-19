@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+        button{
+                display:flex
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inpu"><label>Name</label>
+    <button id="btn">change color</button>
+    <script>
+        let btn=document.getElementById("inpu");
+        btn.addEventListener("keyup",function(evnt){
+            if(event.key=='a'){
+                btn.style.backgroundColor='green';
+            }else{
+                btn.style.backgroundColor="red";
+            }
+        })
+    </script>
+</body>
+</html>

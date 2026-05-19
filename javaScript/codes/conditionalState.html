@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1=+prompt("Enter the first number:")
+        var num2=+prompt("Enter the second number:")
+        var opertion=prompt("Enter the operations(+,-,*)")
+        switch(opertion){
+            case '+':
+                document.write(`sum of ${num1} and ${num2} is ${num1+num2}`);
+                break;
+            case "-":
+                document.write(`difference of ${num1} and ${num2} is ${num1-num2}`);
+                break;
+            case "*":
+                document.write(`product of ${num1} and ${num2} is ${num1*num2}`);
+                break;        
+        }
+
+    </script>
+</body>
+</html>

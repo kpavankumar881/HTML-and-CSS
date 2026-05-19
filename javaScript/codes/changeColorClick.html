@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing the color by clicking</title>
+</head>
+<body>
+    <div>
+        Name:<input id="sp" type="text"/><br><br>
+        <button id="ch" onclick="change()">click</button>
+    </div>
+    <script>
+        function change(){
+            var letters="012346789ABCDFE";
+            var color="#";
+            for(var i=0;i<6;i++){
+                var r=Math.floor(Math.random()*16);
+                color+=letters[r];
+            }
+            document.body.style.backgroundColor=color;
+        }
+        var s=document.getElementById('sp')
+
+    s.onfocus = change2;
+    s.onblur = change3;
+
+    function change2() {
+        s.style.backgroundColor = "yellow";
+    }
+
+    function change3() {
+        s.style.backgroundColor = "white";
+    }
+    </script>
+</body>
+</html>

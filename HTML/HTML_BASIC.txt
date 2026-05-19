@@ -37,8 +37,8 @@ for example: social media platforms, e-commerce websites, and online banking por
 
 Web Development Stages
 ----------------------
-    ==>Front end/ Client side(Html, CSS, Java Script)
-    ==>Back End/ Server side(PHP,Java,Python,node js,perl...)
+    ==>Front end/ Client side (Html, CSS, Java Script)
+    ==>Back End/ Server side  (PHP,Java,Python,node js,perl...)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -324,7 +324,7 @@ It is the backbone of web development and is essential for building websites and
       4. Number
       <input type="number"> ---> take input in form of number ,option increment and decrement
       5.tel
-      <input type="tel"> ---->take input of mobile number
+      <input type="tel"> ----> take input of mobile number
       6. Date
       <input type="date"> ----> take input in form of date
       7. Time
@@ -391,7 +391,7 @@ It is the backbone of web development and is essential for building websites and
       placeholder="text" ----> the attribute is used to give placeholder text to the textarea
 
     3. <select> tags
-      -----------------------
+   -----------------------
         <select name="options">
                   <option value="option1">Option 1</option>
                   <option value="option2">Option 2</option>
@@ -405,8 +405,8 @@ It is the backbone of web development and is essential for building websites and
             value ="en" -----> shortcut value of the instead of sending total value brown sends just en
             <option> tags are used inside the <s elect> tag to define the options in the drop-down list.
 
- Attributes of form tag(<form>)   
- ------------------------------------
+                  Attributes of form tag(<form>)   
+ ---------------------------------------------------------------
       1.action
       <form action="location">
             when we click on submit ,the data is sent to the server in the location
@@ -422,6 +422,7 @@ It is the backbone of web development and is essential for building websites and
 ---------------------------------------------------------------------------------------------------------------------
                   Audio and video
 ---------------------------------------------------------------------------------------------------------------------
+
       1. Audio
       ---------
       Syntax:
@@ -438,6 +439,7 @@ It is the backbone of web development and is essential for building websites and
       muted ----> to make default mute
       autoplay ----> the attribute is used to make the audio play automatically when the page loads
       src="path" ----> the attribute is used to specify the path of the audio file
+
       2. Video
       ---------
       Syntax:
@@ -468,6 +470,7 @@ It is the backbone of web development and is essential for building websites and
             </details>
       Attributes:
       open ----> the attribute is used to specify that the details element should be open by default when the page loads 
+
 ---------------------------------------------------------------------------------------------------------------------------------------
                   <iframe>
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -485,6 +488,7 @@ It is the backbone of web development and is essential for building websites and
 ----------------------------------------------------------------------------------------------------------------------------------------------------
                   Datalist tags
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+
       The <datalist> tag is used to provide a list of predefined options for an <input> element. 
       It allows users to select from a list of options while still allowing them to enter their own value if desired.
       Syntax:
@@ -498,8 +502,8 @@ It is the backbone of web development and is essential for building websites and
       list="id" ----> the attribute is used to associate the input element with the datalist element by specifying the id of the datalist
       id="text" ----> the attribute is used to give id to the datalist element
       <option> tags are used inside the <datalist> tag to define the options in the list.
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-                  Add favicons
+---------------------------------------------------------------------------------------------------------------------------------------
+                         Add favicons
 ---------------------------------------------------------------------------------------------------------------------------------------
       A favicon is a small icon that represents a website and is displayed in the browser's address bar, tabs, and bookmarks. 
       To add a favicon to your website, you can use the following HTML code in the <head> section of your HTML document:

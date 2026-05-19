@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special</title>
+    <style>
+        #special{
+            color:pink;
+        }
+        .one{
+            background-color:blue
+        }
+    </style>
+</head>
+<body>
+    <div id="special">
+        this is division one
+    </div> <br>
+    <script>
+        var x =document.getElementById("special")
+        console.log(x.getAttribute('id'))
+        x.setAttribute('class','one')
+        console.log(x.getAttribute('class'))
+    </script>
+</body>
+</html>

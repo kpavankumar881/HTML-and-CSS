@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #607680;
+        min-height: 100vh;
+        margin: 0;
+        }
+
+    .container{
+        background-color: white;
+        border-radius: 5px;
+        width: 400px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .header{
+        background-color: #f7f7f7;
+        padding: 20px 40px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .header h2{
+        margin: 0;
+    }
+
+    .form{
+        padding: 30px 40px;
+    }
+
+    .field{
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    .field label{
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+
+    .field input:not(.terms){
+        display: block;
+        border-radius: 4px;
+        border:2px solid #f0f0f0;
+        font-size: 14px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .field span{
+        position: absolute;
+        top:30px;
+        right: 10px;
+        visibility: hidden;
+    }
+
+    .field small{
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        visibility: hidden;
+    }
+
+    .form .button{
+        background-color: rgb(90, 104, 235);
+        border: 2px solid rgb(90, 104, 235);
+        color: white;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .field.success input{
+        border-color: #2ecc71;
+    }
+
+    .field.error input{
+        border-color: #e74c3c;
+    }
+
+    .field.success span.success{
+        color: #2ecc71;
+        visibility: visible;
+    }
+
+    .field.error span.error{
+        color: #e74c3c;
+        visibility: visible;
+    }
+
+    .field.error span.success{
+        visibility: none;
+    }
+
+    .field.succes span.error{
+        visibility: none;
+    }
+
+    .field.error small{
+        visibility: visible;
+        color: #e74c3c;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Register Here</h2>
+        </div>
+        <form action="changeColorClick.html" class="form" id="form">
+            <div class="field">
+                <label >Username</label>
+                <input type="text" placeholder="xyz" id="uname">
+                <span class="material-icons success">check_circle</span>
+                <span class="material-icons error ">error</span>
+                <small>Error Message</small>
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input type="email" placeholder="abc@gmail.com" id="email">
+                <span class="material-icons success">check_circle</span>
+                <span class="material-icons error">error</span>
+                <small>Error message</small>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" placeholder="password" id="password">
+                <span class="material-icons success"> check_circle</span>
+                <span class="material-icons error">error</span>
+                <small>Error message</small>
+            </div>
+            <div class="field">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm password" id="cpassword">
+                <span class="material-icons success"> check_circle</span>
+                <span class="material-icons error">error</span>
+                <small>Error Message</small>
+            </div>
+            <div class="field">
+                <input type="checkbox" id="tc" class="terms" >
+                <label>I agree to terms and conditions</label>               
+                <small>Error message</small>
+            </div>
+            <input type="submit" class="button">
+        </form>
+    </div>
+    <script>
+        const form =document.getElementById("form");
+        const uname=document.getElementById("uname");
+        const email=document.getElementById("email");
+        const password=document.getElementById("password");
+        const cpassword=document.getElementById("cpassword");
+        const tc=document.getElementById("tc");
+        let isValidName=false;
+        let isTCChecked=false;
+        let isValidPassword=false;
+        let isValidEmail=false;
+
+        form.addEventListener('keyup',validation);
+
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            validation();
+        })
+        
+        function validation(){
+            let nameValue = uname.value.trim();
+            let emailValue = email.value.trim();
+            let passwordValue = password.value.trim();
+            let cpasswordValue = cpassword.value.trim();
+            checkName();
+            checkEmail();
+            checkPassword();
+            checkcPassword();
+            checktandc();
+            if(isValidName && isValidEmail && isTCChecked && isValidPassword){
+                    form.submit();
+            }
+        }
+
+        function checkName(){
+            let nameValue = uname.value.trim();
+            if(nameValue===''){
+                setError(uname,'user name cannot be empty')
+            }
+            else if(nameValue.lenght<3){
+                setError(uname,'user name should be minimum 3 character')
+            }else{
+                setSuccesss(uname);
+                isValidName=true;
+            }
+        }
+        function checkPassword(){
+            let passwordValue = password.value.trim();
+            if(passwordValue===''){
+                setError(password,'password cannot be empty')
+            }else if(passwordValue.lenght<8){
+                setError(password,'user name should be minimum 8 character')
+            }else{
+                setSuccesss(password);
+                
+            }
+        }
+        function checkcPassword(){
+            let passwordValue = password.value.trim();
+            let cpasswordValue = cpassword.value.trim();
+            if(cpasswordValue===''){
+                setError(cpassword,'password cannot be empty');
+            }else if(cpasswordValue !==passwordValue){
+                setError(cpassword,'passwords not matched');
+            }else{
+                setSuccesss(cpassword);
+                isValidPassword=true;
+            }
+        }
+        function checkEmail(){
+            let emailValue = email.value.trim();
+            if(emailValue===''){
+                setError(email,'Email cannot be empty');
+            }else if(!emailCheck(emailValue)){
+                setError(email,'Email valid Email id');
+            }
+            else{
+                setSuccesss(email);
+                isValidEmail=true;
+            }
+        }
+        function checktandc(){
+            let tc=document.getElementById('tc');
+            if(!tc.checked){
+                setError(tc,'click on agree terms checkbox')
+            }else{
+                setSuccesss(tc);
+                isTCChecked=true;
+            }
+        }
+        function setError(input,message){
+                let parent = input.parentElement;
+                let small = parent.querySelector('small');
+                small.innerText=message;
+                parent.classList.add('error');
+                parent.classList.remove('success');
+            }
+        function setSuccesss(input){
+                let parent = input.parentElement;
+                parent.classList.add("success")
+                parent.classList.remove("error")
+            }
+        function emailCheck(input){
+                let emailReg=/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+                let valid=emailReg.test(input);
+                return valid;
+            }
+    </script>
+</body>
+</html>

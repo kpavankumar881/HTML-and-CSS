@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mySet = new Set();
+        mySet.add(1);
+        mySet.add(5);
+        mySet.add(4);
+        mySet.add(6);
+        mySet.add(5); // Set will ignore this duplicate value
+        mySet.add('some text');
+        mySet.add({ a: 1, b: 2 });
+        console.log(mySet);
+        console.log(mySet.entries())
+        let n=mySet.entries();
+        console.log(n.next());
+        console.log(n.next());
+        
+    </script>
+</body>
+</html>
